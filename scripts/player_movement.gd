@@ -45,7 +45,7 @@ func _ready():
 	add_to_group("player")
 	GameManager.start_level()
 
-func _unhandled_input(event):
+func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if grapple_cool_timer > 0 or is_grappling:
 			return

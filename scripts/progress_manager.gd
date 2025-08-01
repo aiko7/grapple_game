@@ -13,7 +13,7 @@ func _exit_tree():
 func unlock_level(level: int) -> void:
 	if level >= 1 and level <= unlocked_levels.size():
 		unlocked_levels[level - 1] = true
-		save_progress()  # This saves immediately when unlocking
+		save_progress()  
 
 func is_level_unlocked(level: int) -> bool:
 	if level >= 1 and level <= unlocked_levels.size():
@@ -28,7 +28,7 @@ func save_progress():
 		}
 		file.store_string(JSON.stringify(save_data))
 		file.close()
-		print("Progress saved!")  # Debug message
+		print("Progress saved!")  
 
 func load_progress():
 	if FileAccess.file_exists(SAVE_FILE):
@@ -48,7 +48,7 @@ func load_progress():
 					unlocked_levels = []
 					for level in loaded_levels:
 						unlocked_levels.append(bool(level))
-					print("Progress loaded!")  # Debug message
+					print("Progress loaded!")  
 				else:
 					initialize_default_progress()
 			else:
@@ -59,5 +59,5 @@ func load_progress():
 func initialize_default_progress():
 	unlocked_levels = []
 	for i in range(10):
-		unlocked_levels.append(i == 0)  # Only level 1 unlocked by default
-	print("Default progress initialized")  # Debug message
+		unlocked_levels.append(i == 0)  
+	print("Default progress initialized")  

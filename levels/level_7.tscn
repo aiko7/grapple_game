@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1yur7e5h358k"]
+
+[ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base/next_level.tscn" id="1_jm8gk"]
+[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base/level_border.tscn" id="2_3igfe"]
+
+[node name="Level7" type="Node2D"]
+
+[node name="NextLevel" parent="." instance=ExtResource("1_jm8gk")]
+position = Vector2(416, 276)
+next_level_scene = "res://levels/level_8.tscn"
+current_level_number = 7
+
+[node name="Levelborder" parent="." instance=ExtResource("2_3igfe")]

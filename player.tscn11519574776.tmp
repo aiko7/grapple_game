@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://stqfh0go0d3c"]
+
+[ext_resource type="Script" uid="uid://cgb8coqhsfhog" path="res://player_movement.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bfvoj3dq3ka7i" path="res://pngwing.com.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(13, 16.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+grapple_speed = null
+pull_speed = null
+max_grapple_dist = null
+hook_max_range = null
+grapple_cooldown = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.25)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.38813e-21, -3.57628e-07)
+scale = Vector2(0.0425, 0.038)
+texture = ExtResource("2_onrkg")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0

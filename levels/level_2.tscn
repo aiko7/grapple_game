@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://fwalwqhul0xj"]
+
+[ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://player.tscn" id="1_v5uil"]
+[ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base/next_level.tscn" id="2_5722l"]
+[ext_resource type="PackedScene" uid="uid://h7k6iyys0n5q" path="res://base/base_grapple_wall.tscn" id="3_ilhis"]
+[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base/level_border.tscn" id="4_ep78u"]
+[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="5_5722l"]
+
+[node name="Level 2" type="Node2D"]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_v5uil")]
+position = Vector2(24, 56)
+
+[node name="NextLevel" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(917, 471)
+next_level_scene = "res://levels/level_3.tscn"
+current_level_number = 2
+
+[node name="Baseplatform" parent="." instance=ExtResource("3_ilhis")]
+position = Vector2(-1, 158)
+scale = Vector2(10, 1)
+
+[node name="Levelborder" parent="." instance=ExtResource("4_ep78u")]
+
+[node name="Baseplatform2" parent="." instance=ExtResource("3_ilhis")]
+position = Vector2(322, 1)
+scale = Vector2(1, 15)
+
+[node name="Baseplatform3" parent="." instance=ExtResource("3_ilhis")]
+position = Vector2(451, 144)
+
+[node name="Baseplatform4" parent="." instance=ExtResource("3_ilhis")]
+position = Vector2(618, 61)
+
+[node name="Lava" parent="." instance=ExtResource("5_5722l")]
+position = Vector2(329, 530)
+scale = Vector2(1, 10)
+
+[node name="Lava2" parent="." instance=ExtResource("5_5722l")]
+position = Vector2(792, 11)
+scale = Vector2(45, 1)

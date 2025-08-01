@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch112x2tan8xa"]
+
+[ext_resource type="Script" uid="uid://csh1vj58x8jv6" path="res://scripts/lava.gd" id="1_wopy8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
+
+[node name="Lava" type="Node2D"]
+position = Vector2(10, 10)
+script = ExtResource("1_wopy8")
+
+[node name="Area2D" type="Area2D" parent="."]
+modulate = Color(1, 0.25098, 1, 1)
+self_modulate = Color(1, 0.490196, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gil3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.676069, 0, 0.111521, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

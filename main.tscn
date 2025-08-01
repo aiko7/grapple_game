@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv70bfp2y1qrw"]
+
+[ext_resource type="Script" uid="uid://bnbmuce61ab4d" path="res://scripts/UIManager.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+
+[node name="UIManager" type="CanvasLayer" parent="." groups=["ui"]]
+script = ExtResource("1_ig7tw")
+
+[node name="StarContainer" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StarLabel" type="Label" parent="UIManager/StarContainer"]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 52.0
+offset_right = 1090.0
+offset_bottom = 75.0
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/StarContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

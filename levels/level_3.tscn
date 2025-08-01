@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvbkrgybtmw43"]
+
+[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base/level_border.tscn" id="1_bmgug"]
+[ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base/next_level.tscn" id="1_vkd0v"]
+[ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://player.tscn" id="2_20opy"]
+[ext_resource type="PackedScene" uid="uid://h7k6iyys0n5q" path="res://base/base_grapple_wall.tscn" id="3_8l0e1"]
+[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="4_lfnxh"]
+
+[node name="Level 3" type="Node2D"]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_20opy")]
+position = Vector2(82, 179)
+
+[node name="NextLevel" parent="." instance=ExtResource("1_vkd0v")]
+position = Vector2(917, 471)
+next_level_scene = "res://levels/level_4.tscn"
+current_level_number = 3
+
+[node name="Levelborder" parent="." instance=ExtResource("1_bmgug")]
+
+[node name="Baseplatform" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(72, 199)
+
+[node name="Baseplatform2" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(256, 282)
+
+[node name="Baseplatform3" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(400, 254)
+
+[node name="Baseplatform5" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(758, 258)
+
+[node name="Baseplatform6" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(768, 462)
+
+[node name="Baseplatform4" parent="." instance=ExtResource("3_8l0e1")]
+position = Vector2(583, 419)
+
+[node name="Lava" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(203, 51)
+scale = Vector2(1, 5)
+
+[node name="Lava2" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(203, 242)
+scale = Vector2(1, 5)
+
+[node name="Lava3" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(349, 107)
+scale = Vector2(1, 5)
+
+[node name="Lava4" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(349, 298)
+scale = Vector2(1, 5)
+
+[node name="Lava5" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(492, 71)
+scale = Vector2(1, 5)
+
+[node name="Lava6" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(492, 262)
+scale = Vector2(1, 5)
+
+[node name="Lava7" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(698, 374)
+rotation = 1.5708
+scale = Vector2(1, 5)
+
+[node name="Lava8" parent="." instance=ExtResource("4_lfnxh")]
+position = Vector2(846, 325)
+rotation = 1.5708
+scale = Vector2(1, 5)

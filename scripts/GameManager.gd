@@ -27,6 +27,7 @@ func update_star_display():
 		print("UI Manager not found!")
 
 func count_total_stars():
-	print(get_tree().get_nodes_in_group("stars"))
-	total_stars_in_level = get_tree().get_nodes_in_group("stars").size()
+	print(get_tree())
+	
+	total_stars_in_level = get_tree().get_nodes_in_group("Star").size()
 	print("Total stars in level: ", total_stars_in_level)

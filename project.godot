@@ -24,6 +24,7 @@ GameManager="*res://scripts/GameManager.gd"
 
 player=""
 ui=""
+Star=""
 
 [input]
 

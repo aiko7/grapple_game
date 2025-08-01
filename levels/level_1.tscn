@@ -64,7 +64,13 @@ position = Vector2(330, 50)
 position = Vector2(426, 52)
 
 [node name="Star" parent="." instance=ExtResource("8_l53as")]
-position = Vector2(18, 173)
+position = Vector2(149, 587)
+
+[node name="Star3" parent="." instance=ExtResource("8_l53as")]
+position = Vector2(1057, 493)
+
+[node name="Star2" parent="." instance=ExtResource("8_l53as")]
+position = Vector2(646, 589)
 
 [node name="Main" parent="." instance=ExtResource("9_3sk1a")]
 position = Vector2(151, 85)

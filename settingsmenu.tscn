@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://djxcmhfmc6klh"]
+
+[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://settingsmenu.gd" id="1_3pscl"]
+
+[node name="settingsmenu" type="CanvasLayer"]
+script = ExtResource("1_3pscl")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true

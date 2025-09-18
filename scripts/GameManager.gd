@@ -4,6 +4,14 @@ var stars_collected = 0
 var total_stars_in_level = 0
 var ui_manager: UIManager
 
+var pause_menu_scene = preload("res://PauseMenu.tscn")
+var pause_menu
+
+func _ready():
+	pause_menu = pause_menu_scene.instantiate()
+	add_child(pause_menu)
+	pause_menu.hide()
+
 func start_level():
 	if not ui_manager:
 		ui_manager = get_tree().get_first_node_in_group("ui")
@@ -31,3 +39,16 @@ func count_total_stars():
 	
 	total_stars_in_level = get_tree().get_nodes_in_group("Star").size()
 	print("Total stars in level: ", total_stars_in_level)
+
+func _process(delta):
+	if Input.is_action_just_pressed("open_level_selector"):
+		get_tree().change_scene_to_file("res://level_select.tscn")
+
+	if Input.is_action_just_pressed("open_pause_menu"):
+		
+		if get_tree().paused:
+			get_tree().paused = false
+			pause_menu.hide()
+		else:
+			get_tree().paused = true
+			pause_menu.show()

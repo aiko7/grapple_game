@@ -3,9 +3,9 @@ extends Node
 var unlocked_levels: Array[bool] = []
 const SAVE_FILE = "user://progress.dat"
 
+
 func _ready():
 	load_progress()
-	
 	
 func _exit_tree():
 	save_progress()

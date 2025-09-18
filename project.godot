@@ -20,6 +20,10 @@ config/icon="res://assets/icon.svg"
 ProgressManager="*res://scripts/progress_manager.gd"
 GameManager="*res://scripts/GameManager.gd"
 
+[dotnet]
+
+project/assembly_name="New Game Project"
+
 [global_group]
 
 player=""

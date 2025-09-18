@@ -91,7 +91,7 @@ func _input(event):
 					grapple_connected = true
 			else:
 				# Fallback: check collision layer directly
-				var layer = collider.collision_layer
+				var layer = collider.tile_set.get_physics_layer_collision_layer(0)
 				if layer & (1 << (NO_GRAPPLE_LAYER - 1)):
 					current_wall_type = NO_GRAPPLE_LAYER
 					grapple_connected = false

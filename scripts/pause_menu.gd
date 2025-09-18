@@ -30,7 +30,7 @@ func _on_settings_pressed():
 
 func _on_level_selector_pressed():
 	# Same idea: either load scene or show overlay
-	get_tree().change_scene_to_file("res://level_select.tscn")
+	get_tree().change_scene_to_file("res://menu_scenes/level_select.tscn")
 	_on_resume_pressed()
 	
 func _on_quit_pressed():

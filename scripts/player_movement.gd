@@ -109,6 +109,9 @@ func _input(event):
 
 func die():
 	print("Player died!")
+	call_deferred("_reload_scene_deferred")
+
+func _reload_scene_deferred():
 	get_tree().reload_current_scene()
 
 

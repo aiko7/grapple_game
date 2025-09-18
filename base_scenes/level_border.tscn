@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ceh3ixywfr58n"]
 
-[ext_resource type="PackedScene" uid="uid://c17hp266135uf" path="res://base/base_break_wall.tscn" id="2_21gty"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="2_jbmjt"]
+[ext_resource type="PackedScene" uid="uid://c17hp266135uf" path="res://base_scenes/base_break_wall.tscn" id="2_21gty"]
+[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="2_jbmjt"]
 
 [node name="Levelborder" type="Node2D"]
 

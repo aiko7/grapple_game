@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkk2cilj1ivi3"]
 
-[ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_e8j80"]
-[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="2_c2spk"]
+[ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_qdk1p"]
+[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="2_jjqb4"]
 
 [node name="Menus" type="CanvasLayer"]
 
@@ -10,7 +10,7 @@ process_mode = 3
 clip_contents = true
 offset_right = 320.0
 offset_bottom = 320.0
-script = ExtResource("1_e8j80")
+script = ExtResource("1_qdk1p")
 metadata/_edit_use_anchors_ = true
 
 [node name="ResumeButton" type="Button" parent="PauseMenu"]
@@ -44,7 +44,7 @@ text = "Quit"
 visible = false
 offset_right = 300.0
 offset_bottom = 300.0
-script = ExtResource("2_c2spk")
+script = ExtResource("2_jjqb4")
 metadata/_edit_use_anchors_ = true
 
 [node name="MasterVolumeSlider" type="HSlider" parent="SettingsMenu"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch112x2tan8xa"]
 
-[ext_resource type="Script" uid="uid://csh1vj58x8jv6" path="res://scripts/lava.gd" id="1_wopy8"]
+[ext_resource type="Script" uid="uid://csh1vj58x8jv6" path="res://scripts/lava.gd" id="1_7fltl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
 
 [node name="Lava" type="Node2D"]
-script = ExtResource("1_wopy8")
+script = ExtResource("1_7fltl")
 
 [node name="Area2D" type="Area2D" parent="."]
 modulate = Color(1, 0.25098, 1, 1)

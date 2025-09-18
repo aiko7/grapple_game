@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvbkrgybtmw43"]
 
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base/level_border.tscn" id="1_bmgug"]
-[ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base/next_level.tscn" id="1_vkd0v"]
-[ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://player.tscn" id="2_20opy"]
-[ext_resource type="PackedScene" uid="uid://h7k6iyys0n5q" path="res://base/base_grapple_wall.tscn" id="3_8l0e1"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="4_lfnxh"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base/Star.tscn" id="6_8l0e1"]
+[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="1_bmgug"]
+[ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_vkd0v"]
+[ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="2_20opy"]
+[ext_resource type="PackedScene" uid="uid://h7k6iyys0n5q" path="res://base_scenes/base_grapple_wall.tscn" id="3_8l0e1"]
+[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_lfnxh"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="6_8l0e1"]
 
 [node name="Level 3" type="Node2D"]
 

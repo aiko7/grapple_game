@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c3siji8qkef1e"]
 
-[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="1_3pscl"]
+[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="1_utdpy"]
 
 [node name="settingsmenu" type="CanvasLayer"]
-script = ExtResource("1_3pscl")
+script = ExtResource("1_utdpy")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 300.0

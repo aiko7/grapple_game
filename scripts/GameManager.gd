@@ -4,7 +4,7 @@ var stars_collected = 0
 var total_stars_in_level = 0
 var ui_manager: UIManager
 
-var pause_menu_scene = preload("res://Menus.tscn")
+var pause_menu_scene = preload("res://menu_scenes/Menus.tscn")
 var pause_menu
 var pause_panel
 
@@ -51,7 +51,7 @@ func count_total_stars():
 
 func _process(delta):
 	if Input.is_action_just_pressed("open_level_selector"):
-		get_tree().change_scene_to_file("res://level_select.tscn")
+		get_tree().change_scene_to_file("res://menu_scenes/level_select.tscn")
 
 	if Input.is_action_just_pressed("open_pause_menu"):
 		

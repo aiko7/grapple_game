@@ -4,14 +4,23 @@ var stars_collected = 0
 var total_stars_in_level = 0
 var ui_manager: UIManager
 
-var pause_menu_scene = preload("res://PauseMenu.tscn")
+var pause_menu_scene = preload("res://Menus.tscn")
 var pause_menu
+var pause_panel
 
+var settings_panel
 func _ready():
+	
 	pause_menu = pause_menu_scene.instantiate()
 	add_child(pause_menu)
-	pause_menu.hide()
+	pause_panel = pause_menu.get_node("PauseMenu")
+	settings_panel = pause_menu.get_node("SettingsMenu")	
+	
+	settings_panel.hide()
+	pause_panel.hide()
+	
 
+	
 func start_level():
 	if not ui_manager:
 		ui_manager = get_tree().get_first_node_in_group("ui")
@@ -46,9 +55,16 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("open_pause_menu"):
 		
-		if get_tree().paused:
+		
+		if settings_panel.visible:
+			settings_panel.hide()
+			pause_panel.hide()
 			get_tree().paused = false
-			pause_menu.hide()
+
+		elif get_tree().paused:
+			get_tree().paused = false
+			pause_panel.hide()
+
 		else:
 			get_tree().paused = true
-			pause_menu.show()
+			pause_panel.show()

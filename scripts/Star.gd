@@ -6,6 +6,8 @@ extends Area2D
 
 @onready var sprite = $Sprite2D  # or whatever your star visual node is
 @onready var collision = $CollisionShape2D
+@onready var sfx_player = $AudioStreamPlayer
+
 
 # Optional: Add some visual flair
 var bob_speed = 2.0
@@ -33,16 +35,15 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name == "Player" or body.is_in_group("player"):
 		collect_star()
-		$AudioStreamPlayer.play()
 
 func collect_star():
-	# Tell the game manager we collected a star
 	GameManager.collect_star()
 	
-	# Optional: Play collection sound/animation
-	# AudioManager.play_sound("star_collect")
+	# Detach SFX so it continues playing after node is freed
+	var sfx = sfx_player.duplicate()
+	get_parent().add_child(sfx)
+	sfx.play()
 	
+	queue_free()  # Now safe to remove star
+
 	# Optional: Simple scale-up animation before disappearing
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.5, 1.5), 0.1)
-	tween.tween_callback(queue_free)

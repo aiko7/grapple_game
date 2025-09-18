@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://4v18ykln4jk1"]
+[gd_scene load_steps=13 format=3 uid="uid://4v18ykln4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://player.tscn" id="1_n46q3"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="2_btoec"]
@@ -9,6 +9,62 @@
 [ext_resource type="PackedScene" uid="uid://i3jua7rn6gko" path="res://base/base_nograpple_wall.tscn" id="7_l53as"]
 [ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base/Star.tscn" id="8_l53as"]
 [ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://main.tscn" id="9_3sk1a"]
+[ext_resource type="Texture2D" uid="uid://bhobl3lmwvvr0" path="res://assets/simple_tile_set.png" id="10_08mmt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ot28"]
+texture = ExtResource("10_08mmt")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aerfg"]
+sources/0 = SubResource("TileSetAtlasSource_5ot28")
 
 [node name="level_1" type="Node2D"]
 
@@ -16,7 +72,7 @@
 position = Vector2(40, 64)
 
 [node name="Lava" parent="." instance=ExtResource("2_btoec")]
-position = Vector2(190, 180)
+position = Vector2(195, 167)
 
 [node name="NextLevel" parent="." instance=ExtResource("3_gwceb")]
 position = Vector2(1094, 358)
@@ -38,8 +94,8 @@ position = Vector2(81, 501)
 scale = Vector2(6, 1)
 
 [node name="Lava2" parent="." instance=ExtResource("2_btoec")]
-position = Vector2(540, 344)
-scale = Vector2(10, 1)
+position = Vector2(440, 334)
+scale = Vector2(10.15, 1)
 
 [node name="Baseplatform5" parent="." instance=ExtResource("4_l53as")]
 position = Vector2(360, 577)
@@ -67,10 +123,18 @@ position = Vector2(426, 52)
 position = Vector2(149, 587)
 
 [node name="Star3" parent="." instance=ExtResource("8_l53as")]
-position = Vector2(1057, 493)
+position = Vector2(1055, 84)
+
+[node name="Star4" parent="." instance=ExtResource("8_l53as")]
+position = Vector2(127, 132)
 
 [node name="Star2" parent="." instance=ExtResource("8_l53as")]
 position = Vector2(646, 589)
 
 [node name="Main" parent="." instance=ExtResource("9_3sk1a")]
 position = Vector2(151, 85)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_aerfg")
+format = 2
+layer_0/tile_data = PackedInt32Array(786433, 65536, 1, 786432, 65536, 1, 786434, 65536, 1, 786435, 65536, 1, 786436, 65536, 1, 786437, 65536, 1, 786438, 65536, 1, 786439, 65536, 1)

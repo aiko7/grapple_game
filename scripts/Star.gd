@@ -33,6 +33,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name == "Player" or body.is_in_group("player"):
 		collect_star()
+		$AudioStreamPlayer.play()
 
 func collect_star():
 	# Tell the game manager we collected a star

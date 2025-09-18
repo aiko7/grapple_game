@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbannc4dbvctw"]
+[gd_scene load_steps=9 format=3 uid="uid://bbannc4dbvctw"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base/next_level.tscn" id="1_fwt2v"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base/level_border.tscn" id="2_b15rf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://i3jua7rn6gko" path="res://base/base_nograpple_wall.tscn" id="5_dmnu2"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base/lava.tscn" id="6_sc6c1"]
 [ext_resource type="PackedScene" uid="uid://c17hp266135uf" path="res://base/base_break_wall.tscn" id="7_0fd8o"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base/Star.tscn" id="8_dmnu2"]
 
 [node name="Level4" type="Node2D"]
 
@@ -46,34 +47,47 @@ position = Vector2(816, 442)
 scale = Vector2(4, 1)
 
 [node name="Lava" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(478, 309)
+position = Vector2(443, 309)
 scale = Vector2(3.5, 1)
 
 [node name="Lava6" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(351, 495)
+position = Vector2(341, 495)
 
 [node name="Lava7" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(385, 340)
+position = Vector2(375, 340)
 
 [node name="Lava8" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(351, 176)
+position = Vector2(341, 176)
 
 [node name="Lava4" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(533, 68)
+position = Vector2(443, 58)
 scale = Vector2(9, 1)
 
 [node name="Lava2" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(588, 309)
+position = Vector2(554, 309)
 scale = Vector2(3.5, 1)
 
 [node name="Lava5" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(856, 432)
+position = Vector2(806, 422)
 scale = Vector2(5, 1)
 
 [node name="Lava3" parent="." instance=ExtResource("6_sc6c1")]
-position = Vector2(535, 553)
-scale = Vector2(6, 1)
+position = Vector2(512, 553)
+scale = Vector2(4, 1)
+
+[node name="Lava9" parent="." instance=ExtResource("6_sc6c1")]
+position = Vector2(523, 433)
+scale = Vector2(1, 6)
 
 [node name="Baseplatform9" parent="." instance=ExtResource("7_0fd8o")]
 position = Vector2(321, 63)
 scale = Vector2(1, 27)
+
+[node name="Star" parent="." instance=ExtResource("8_dmnu2")]
+position = Vector2(249, 594)
+
+[node name="Star2" parent="." instance=ExtResource("8_dmnu2")]
+position = Vector2(1041, 595)
+
+[node name="Star3" parent="." instance=ExtResource("8_dmnu2")]
+position = Vector2(610, 604)

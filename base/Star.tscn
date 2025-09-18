@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw2woqpjt82d"]
+[gd_scene load_steps=5 format=3 uid="uid://cw2woqpjt82d"]
 
 [ext_resource type="Script" uid="uid://c7gmncxopbtum" path="res://scripts/Star.gd" id="1_1c4s2"]
 [ext_resource type="Texture2D" uid="uid://ti200bfbsrt5" path="res://assets/Red_star.svg.png" id="2_j24n3"]
+[ext_resource type="AudioStream" uid="uid://ce8oq8mbsmqbq" path="res://assets/bubblepop-254773.mp3" id="3_fkh8b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j24n3"]
 
@@ -9,10 +10,13 @@
 script = ExtResource("1_1c4s2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 2.38419e-07)
+position = Vector2(0, 2.38419e-07)
 scale = Vector2(0.015, 0.014)
 texture = ExtResource("2_j24n3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_j24n3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fkh8b")
+volume_db = 24.0

@@ -4,7 +4,7 @@
 
 extends Area2D
 
-@onready var sprite = $Sprite2D  # or whatever your star visual node is
+@onready var sprite = $AnimatedSprite2D  # or whatever your star visual node is
 @onready var collision = $CollisionShape2D
 @onready var sfx_player = $AudioStreamPlayer
 

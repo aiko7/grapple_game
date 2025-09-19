@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw2woqpjt82d"]
+[gd_scene load_steps=8 format=3 uid="uid://cw2woqpjt82d"]
 
 [ext_resource type="Script" uid="uid://c7gmncxopbtum" path="res://scripts/Star.gd" id="1_1c4s2"]
 [ext_resource type="Texture2D" uid="uid://ti200bfbsrt5" path="res://assets/Red_star.svg.png" id="2_j24n3"]
@@ -6,6 +6,17 @@
 [ext_resource type="SpriteFrames" uid="uid://b61sx8fn50h77" path="res://assets/sprite_sheets/star_anim.tres" id="4_c2f1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j24n3"]
+
+[sub_resource type="Gradient" id="Gradient_c2f1u"]
+offsets = PackedFloat32Array(0, 0.720779)
+colors = PackedColorArray(2, 1.3, 0.451, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i3xx0"]
+gradient = SubResource("Gradient_c2f1u")
+width = 50
+height = 50
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Star" type="Area2D" groups=["Star"]]
 script = ExtResource("1_1c4s2")
@@ -26,5 +37,7 @@ volume_db = 24.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("4_c2f1u")
 autoplay = "default"
-frame = 1
-frame_progress = 0.483638
+frame_progress = 0.882841
+
+[node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D"]
+texture = SubResource("GradientTexture2D_i3xx0")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkk2cilj1ivi3"]
+[gd_scene load_steps=4 format=3 uid="uid://dkk2cilj1ivi3"]
 
 [ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_qdk1p"]
 [ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="2_jjqb4"]
+[ext_resource type="Script" uid="uid://dnkx8y2h2m6u1" path="res://menu_scenes/infomenu.gd" id="3_jjqb4"]
 
 [node name="Menus" type="CanvasLayer"]
 
@@ -33,11 +34,18 @@ offset_right = 115.0
 offset_bottom = 111.0
 text = "Level Selector"
 
-[node name="QuitButton" type="Button" parent="PauseMenu"]
+[node name="InfoButton" type="Button" parent="PauseMenu"]
 layout_mode = 0
 offset_top = 120.0
 offset_right = 42.0
 offset_bottom = 151.0
+text = "Info"
+
+[node name="QuitButton" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 42.0
+offset_bottom = 191.0
 text = "Quit"
 
 [node name="SettingsMenu" type="Panel" parent="."]
@@ -69,6 +77,33 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="SettingsMenu"]
 layout_mode = 0
+offset_top = 120.0
+offset_right = 45.0
+offset_bottom = 151.0
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="InfoMenu" type="Panel" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_jjqb4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InfoMenu"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 37.0
+offset_right = 265.0
+offset_bottom = 257.0
+text = "sdasfd 
+test 
+hello"
+
+[node name="BackButton" type="Button" parent="InfoMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -2.0
+anchor_bottom = -2.0
 offset_top = 120.0
 offset_right = 45.0
 offset_bottom = 151.0

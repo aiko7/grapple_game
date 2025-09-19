@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://4v18ykln4jk1"]
+[gd_scene load_steps=13 format=4 uid="uid://4v18ykln4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_n46q3"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="2_btoec"]
@@ -10,6 +10,7 @@
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="10_aerfg"]
 [ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="11_5ot28"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="11_nmsli"]
+[ext_resource type="Environment" uid="uid://ctkld1uw5kjvg" path="res://assets/main_environment.tres" id="12_aerfg"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="12_betor"]
 
 [node name="level_1" type="Node2D"]
@@ -68,6 +69,10 @@ tile_map_data = PackedByteArray("AAA5ACAAAAACAAAAAAA5AB8AAAAAAAAAAAA5AB4AAAACAAE
 tile_set = ExtResource("10_08mmt")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
+self_modulate = Color(1.8, 1.7, 1.5, 1)
 scale = Vector2(1.25, 1.25)
 tile_map_data = PackedByteArray("AAAWABAAAAAAAAAAAAAXABAAAAABAAAAAAAYABAAAAACAAAAAAAZABAAAAADAAAAAAAaABAAAAAEAAAAAAAbABAAAAAAAAAAAAAcABAAAAABAAAAAAAdABAAAAACAAAAAAAeABAAAAADAAAAAAAfABAAAAAEAAAAAAA=")
 tile_set = ExtResource("11_5ot28")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("12_aerfg")

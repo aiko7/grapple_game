@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq4hv2cl10w8r"]
+[gd_scene load_steps=7 format=3 uid="uid://8gnhcdmqv20c"]
 
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="1_vujc4"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="2_oluae"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="3_2al03"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="4_yw1l5"]
 [ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="5_nxxtj"]
-[ext_resource type="TileSet" uid="uid://c4nx40qsbjqlj" path="res://assets/tile_sets/spikes_tile_set.tres" id="6_oluae"]
+[ext_resource type="TileSet" uid="uid://l7w5nhysyaij" path="res://assets/tile_sets/spikes_tile_set.tres" id="6_oluae"]
 
 [node name="Tiling" type="Node2D"]
 

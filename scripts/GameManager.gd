@@ -9,13 +9,18 @@ var pause_menu
 var pause_panel
 
 var settings_panel
+var info_panel
+
 func _ready():
 	
 	pause_menu = pause_menu_scene.instantiate()
 	add_child(pause_menu)
 	pause_panel = pause_menu.get_node("PauseMenu")
-	settings_panel = pause_menu.get_node("SettingsMenu")	
+
+	settings_panel = pause_menu.get_node("SettingsMenu")		
+	info_panel = pause_menu.get_node("InfoMenu")
 	
+	info_panel.hide()
 	settings_panel.hide()
 	pause_panel.hide()
 	
@@ -56,7 +61,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("open_pause_menu"):
 		
 		
-		if settings_panel.visible:
+		if info_panel.visible:
+			info_panel.hide()
+			pause_panel.hide()
+			get_tree().paused = false
+			
+		elif settings_panel.visible:
 			settings_panel.hide()
 			pause_panel.hide()
 			get_tree().paused = false

@@ -1,3 +1,3 @@
-[gd_scene load_steps=0 format=3 uid="uid://ctkvnht35m6ok"]
+[gd_scene format=3 uid="uid://bllgpjxmfjtx"]
 
 [node name="BaseBasicTileMapLayer" type="Node2D"]

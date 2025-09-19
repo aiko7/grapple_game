@@ -1,6 +1,9 @@
 extends Control
 
 func _ready():
+	var resetButton = $RenameButton
+	resetButton.pressed.connect(_on_reset_pressed)
+	
 	var grid = $VBoxContainer/GridContainer
 	for i in range(1, 11):
 		var button = grid.get_child(i - 1)
@@ -11,3 +14,8 @@ func _ready():
 func _on_level_pressed(level_number: int):
 	var path = "res://levels/level_%d.tscn" % level_number
 	get_tree().change_scene_to_file(path)
+
+func _on_reset_pressed():
+	ProgressManager.reset_progress()
+	var a = "res://levels/level_1.tscn"
+	get_tree().change_scene_to_file(a)	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbannc4dbvctw"]
+[gd_scene load_steps=10 format=3 uid="uid://bbannc4dbvctw"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_fwt2v"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_b15rf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="6_sc6c1"]
 [ext_resource type="PackedScene" uid="uid://c17hp266135uf" path="res://base_scenes/base_break_wall.tscn" id="7_0fd8o"]
 [ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="8_dmnu2"]
+[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="9_sc6c1"]
 
 [node name="Level4" type="Node2D"]
 
@@ -91,3 +92,6 @@ position = Vector2(1041, 595)
 
 [node name="Star3" parent="." instance=ExtResource("8_dmnu2")]
 position = Vector2(610, 604)
+
+[node name="Main" parent="." instance=ExtResource("9_sc6c1")]
+position = Vector2(151, 85)

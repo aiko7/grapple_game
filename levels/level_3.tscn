@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvbkrgybtmw43"]
+[gd_scene load_steps=13 format=4 uid="uid://bvbkrgybtmw43"]
 
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="1_bmgug"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_vkd0v"]
@@ -6,11 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://h7k6iyys0n5q" path="res://base_scenes/base_grapple_wall.tscn" id="3_8l0e1"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_lfnxh"]
 [ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="6_8l0e1"]
+[ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="7_wj73x"]
+[ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="8_0unm6"]
+[ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="9_q42ux"]
+[ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="10_wi0qq"]
+[ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="11_s3q8p"]
+[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="12_0unm6"]
 
 [node name="Level 3" type="Node2D"]
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_20opy")]
-position = Vector2(114, 255)
+position = Vector2(111, 251)
 
 [node name="NextLevel" parent="." instance=ExtResource("1_vkd0v")]
 position = Vector2(917, 471)
@@ -20,22 +26,28 @@ current_level_number = 3
 [node name="Levelborder" parent="." instance=ExtResource("1_bmgug")]
 
 [node name="Baseplatform" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(105, 267)
+visible = false
+position = Vector2(100, 260)
 
 [node name="Baseplatform2" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(279, 324)
+visible = false
+position = Vector2(280, 320)
 
 [node name="Baseplatform3" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(420, 255)
-
-[node name="Baseplatform5" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(781, 258)
-
-[node name="Baseplatform6" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(767, 480)
+visible = false
+position = Vector2(420, 260)
 
 [node name="Baseplatform4" parent="." instance=ExtResource("3_8l0e1")]
-position = Vector2(583, 419)
+visible = false
+position = Vector2(580, 420)
+
+[node name="Baseplatform5" parent="." instance=ExtResource("3_8l0e1")]
+visible = false
+position = Vector2(780, 260)
+
+[node name="Baseplatform6" parent="." instance=ExtResource("3_8l0e1")]
+visible = false
+position = Vector2(760, 480)
 
 [node name="Lava" parent="." instance=ExtResource("4_lfnxh")]
 position = Vector2(203, 51)
@@ -79,3 +91,31 @@ position = Vector2(1120, 288)
 
 [node name="Star3" parent="." instance=ExtResource("6_8l0e1")]
 position = Vector2(502, 24)
+
+[node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("7_wj73x")
+
+[node name="BreakGrappleTileMap" type="TileMapLayer" parent="."]
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("8_0unm6")
+
+[node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
+show_behind_parent = true
+position = Vector2(1, 0)
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("9_q42ux")
+
+[node name="LavaTileMapLayer" type="TileMapLayer" parent="."]
+self_modulate = Color(1.8, 1.7, 1.5, 1)
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("10_wi0qq")
+
+[node name="GrappleWallTileMap" type="TileMapLayer" parent="."]
+position = Vector2(5.96046e-08, 0)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAFAA0AAAADAAMAAAAOABAAAAADAAMAAAAVAA0AAAADAAMAAAAdABUAAAADAAMAAAAmABgAAAADAAMAAAAnAA0AAAADAAMAAAA=")
+tile_set = ExtResource("11_s3q8p")
+
+[node name="Main" parent="." instance=ExtResource("12_0unm6")]
+position = Vector2(151, 85)

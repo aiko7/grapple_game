@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy0u8ecxcya1e"]
+[gd_scene load_steps=9 format=3 uid="uid://dy0u8ecxcya1e"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_erq1u"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_yaabq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c17hp266135uf" path="res://base_scenes/base_break_wall.tscn" id="5_1y5xd"]
 [ext_resource type="PackedScene" uid="uid://i3jua7rn6gko" path="res://base_scenes/base_nograpple_wall.tscn" id="6_g5mgy"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="7_g5mgy"]
+[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="8_v5ho1"]
 
 [node name="Level5" type="Node2D"]
 
@@ -177,3 +178,6 @@ scale = Vector2(5, 1)
 [node name="Lava" parent="." instance=ExtResource("7_g5mgy")]
 position = Vector2(431, 398)
 scale = Vector2(15, 1)
+
+[node name="Main" parent="." instance=ExtResource("8_v5ho1")]
+position = Vector2(151, 85)

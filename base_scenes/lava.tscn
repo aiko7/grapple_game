@@ -8,12 +8,11 @@
 script = ExtResource("1_7fltl")
 
 [node name="Area2D" type="Area2D" parent="."]
-modulate = Color(1, 0.25098, 1, 1)
-self_modulate = Color(1, 0.490196, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_gil3p")
+debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="ColorRect" type="ColorRect" parent="Area2D/CollisionShape2D"]
 offset_left = -10.0

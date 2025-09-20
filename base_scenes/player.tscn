@@ -218,7 +218,7 @@ states/Run/node = SubResource("AnimationNodeBlendSpace1D_kbbe6")
 states/Run/position = Vector2(665, 32)
 states/Start/position = Vector2(214, 108)
 transitions = ["Idle", "Run", SubResource("AnimationNodeStateMachineTransition_8udvs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_o45lo"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_2qjss"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_7y62w"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_c72js"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_ya6h1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4mmd0")]
-graph_offset = Vector2(-34, -5)
+graph_offset = Vector2(-7, -62)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree")]
 collision_mask = 7
@@ -249,6 +249,7 @@ position_smoothing_enabled = true
 environment = ExtResource("3_o45lo")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2, -8)
 color = Color(1.5, 1, 0.25, 1)
 energy = 1.5
 shadow_enabled = true
@@ -265,6 +266,6 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Idle = false
 parameters/conditions/Jump = false
 parameters/conditions/Run = false
-parameters/Idle/blend_position = -1.00746
+parameters/Idle/blend_position = 0.664179
 parameters/Jump/blend_position = 0
 parameters/Run/blend_position = 0

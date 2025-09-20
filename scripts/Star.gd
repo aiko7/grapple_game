@@ -5,6 +5,8 @@ extends Area2D
 @onready var collision = $CollisionShape2D
 @onready var sfx_player = $AudioStreamPlayer
 
+@onready var particles = $GPUParticles2D
+
 var bob_speed = 2.0
 var bob_height = 5.0
 var time_passed = 0.0
@@ -40,4 +42,14 @@ func collect_star():
 	var sfx = sfx_player.duplicate()
 	get_parent().add_child(sfx)
 	sfx.play()
+	
+	# Create particle system in world so it plays after freeing
+	var particles_new = particles.duplicate()
+	get_parent().add_child(particles_new)
+	particles_new.position = position
+	particles_new.emitting = true
+	
+	# Start particle timer so it removes itself
+	particles_new.get_child(0).start()
+	
 	queue_free()

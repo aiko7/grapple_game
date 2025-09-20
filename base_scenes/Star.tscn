@@ -8,13 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_j24n3"]
 
 [sub_resource type="Gradient" id="Gradient_c2f1u"]
-offsets = PackedFloat32Array(0, 0.720779)
+offsets = PackedFloat32Array(0, 0.714286)
 colors = PackedColorArray(2, 1.3, 0.451, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_i3xx0"]
 gradient = SubResource("Gradient_c2f1u")
-width = 50
-height = 50
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -40,4 +38,5 @@ autoplay = "default"
 frame_progress = 0.882841
 
 [node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D"]
+energy = 1.5
 texture = SubResource("GradientTexture2D_i3xx0")

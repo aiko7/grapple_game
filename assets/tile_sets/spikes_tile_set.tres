@@ -1,14 +1,31 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://l7w5nhysyaij"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://l7w5nhysyaij"]
 
 [ext_resource type="Texture2D" uid="uid://bqi0380uqx465" path="res://assets/sprites/spike_tiles.png" id="1_dqppm"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dqppm"]
+polygon = PackedVector2Array(-8, -8, -5.01412, -8, -5.04647, -7.05212, -1, -7, -1, -6, 2, -6, 2, -5, 1, -5, 1, -4, 0, -4, 0, -3, -1, -3, -1, -2, 5, -2, 5, -1, 8, -1, 8, 0, 6, 0, 6, 1, 4, 1, 4, 2, 1, 2, 1, 3, 5, 3, 5, 4, 3, 4, 3, 5, 0, 5, 0, 6, -4, 6, -4, 7, -7, 7, -7, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fwbqf"]
+polygon = PackedVector2Array(8, -8, 5.01412, -8, 5.04647, -7.05212, 1, -7, 1, -6, -2, -6, -2, -5, -1, -5, -1, -4, 0, -4, 0, -3, 1, -3, 1, -2, -5, -2, -5, -1, -8, -1, -8, 0, -6, 0, -6, 1, -4, 1, -4, 2, -1, 2, -1, 3, -5, 3, -5, 4, -3, 4, -3, 5, 0, 5, 0, 6, 4, 6, 4, 7, 7, 7, 7, 8, 8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0xcmk"]
+polygon = PackedVector2Array(-8, -8, -8, -5.01412, -7.05212, -5.04647, -7, -1, -6, -1, -6, 2, -5, 2, -5, 1, -4, 1, -4, 0, -3, 0, -3, -1, -2, -1, -2, 5, -1, 5, -1, 8, 0, 8, 0, 6, 1, 6, 1, 4, 2, 4, 2, 1, 3, 1, 3, 5, 4, 5, 4, 3, 5, 3, 5, 0, 6, 0, 6, -4, 7, -4, 7, -7, 8, -7, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dxohk"]
+polygon = PackedVector2Array(-8, 8, -8, 5.01412, -7.05212, 5.04647, -7, 1, -6, 1, -6, -2, -5, -2, -5, -1, -4, -1, -4, 0, -3, 0, -3, 1, -2, 1, -2, -5, -1, -5, -1, -8, 0, -8, 0, -6, 1, -6, 1, -4, 2, -4, 2, -1, 3, -1, 3, -5, 4, -5, 4, -3, 5, -3, 5, 0, 6, 0, 6, 4, 7, 4, 7, 7, 8, 7, 8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwbqf"]
 texture = ExtResource("1_dqppm")
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dqppm")
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fwbqf")
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0xcmk")
 3:0/0 = 0
 4:0/0 = 0
+4:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dxohk")
 
 [resource]
+occlusion_layer_0/light_mask = 1
 sources/0 = SubResource("TileSetAtlasSource_fwbqf")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://stqfh0go0d3c"]
+[gd_scene load_steps=25 format=3 uid="uid://stqfh0go0d3c"]
 
 [ext_resource type="Script" uid="uid://cgb8coqhsfhog" path="res://scripts/player_movement.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dxot6fe5k1vxa" path="res://assets/sprite_sheets/player_idle_sprite.png" id="3_2qjss"]
@@ -13,8 +13,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2qjss"]
 gradient = SubResource("Gradient_o45lo")
-width = 512
-height = 512
+width = 128
+height = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -100,45 +100,11 @@ tracks/0/keys = {
 "values": [8, 10, 11, 9]
 }
 
-[sub_resource type="Animation" id="Animation_4mmd0"]
-resource_name = "jump_right_anim"
-length = 0.0333367
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [12]
-}
-
-[sub_resource type="Animation" id="Animation_kbbe6"]
-resource_name = "jump_left_anim"
-length = 0.0333367
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [13]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4mmd0"]
 _data = {
 &"RESET": SubResource("Animation_7y62w"),
 &"idle_left_anim": SubResource("Animation_ya6h1"),
 &"idle_right_anim": SubResource("Animation_c72js"),
-&"jump_left_anim": SubResource("Animation_kbbe6"),
-&"jump_right_anim": SubResource("Animation_4mmd0"),
 &"run_left_anim": SubResource("Animation_2qjss"),
 &"run_right_anim": SubResource("Animation_o45lo")
 }
@@ -157,18 +123,8 @@ blend_point_1/pos = 1.0
 snap = 0.5
 blend_mode = 2
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o45lo"]
-animation = &"jump_left_anim"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c72js"]
-animation = &"jump_right_anim"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_vn2il"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_o45lo")
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_c72js")
-blend_point_1/pos = 1.0
-blend_mode = 1
+animation = &"RESET"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ya6h1"]
 animation = &"run_left_anim"
@@ -183,6 +139,12 @@ blend_point_1/node = SubResource("AnimationNodeAnimation_4mmd0")
 blend_point_1/pos = 1.0
 blend_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vn2il"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kikys"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8udvs"]
 advance_mode = 2
 advance_condition = &"Run"
@@ -191,35 +153,16 @@ advance_condition = &"Run"
 advance_mode = 2
 advance_condition = &"Idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2qjss"]
-advance_mode = 2
-advance_condition = &"Jump"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7y62w"]
-advance_mode = 2
-advance_condition = &"Idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c72js"]
-advance_mode = 2
-advance_condition = &"Run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ya6h1"]
-advance_mode = 2
-advance_condition = &"Jump"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4mmd0"]
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8udvs"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace1D_c72js")
-states/Idle/position = Vector2(474, 32)
-states/Jump/node = SubResource("AnimationNodeBlendSpace1D_vn2il")
-states/Jump/position = Vector2(564, 148)
+states/Idle/position = Vector2(489, 108)
+states/RESET/node = SubResource("AnimationNodeAnimation_c72js")
+states/RESET/position = Vector2(338, 108)
 states/Run/node = SubResource("AnimationNodeBlendSpace1D_kbbe6")
-states/Run/position = Vector2(665, 32)
+states/Run/position = Vector2(680, 108)
 states/Start/position = Vector2(214, 108)
-transitions = ["Idle", "Run", SubResource("AnimationNodeStateMachineTransition_8udvs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_o45lo"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_2qjss"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_7y62w"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_c72js"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_ya6h1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4mmd0")]
-graph_offset = Vector2(-34, -5)
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_vn2il"), "RESET", "Idle", SubResource("AnimationNodeStateMachineTransition_kikys"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_8udvs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_o45lo")]
+graph_offset = Vector2(-17, 19)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree")]
 collision_mask = 7
@@ -227,20 +170,19 @@ script = ExtResource("1_onrkg")
 anim_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.25)
+position = Vector2(-0.5, -0.25)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3.38813e-21, -3.57628e-07)
 texture = ExtResource("3_2qjss")
 hframes = 4
-vframes = 4
+vframes = 3
 
 [node name="Line2D" type="Line2D" parent="."]
 self_modulate = Color(8, 7, 5, 1)
 width = 2.0
 default_color = Color(0.886275, 0.196078, 0.258824, 1)
-begin_cap_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -250,8 +192,6 @@ position_smoothing_enabled = true
 environment = ExtResource("3_o45lo")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-color = Color(1.5, 1, 0.25, 1)
-energy = 1.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_2qjss")
 
@@ -264,8 +204,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_8udvs")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Idle = false
-parameters/conditions/Jump = false
 parameters/conditions/Run = false
 parameters/Idle/blend_position = -1.00746
-parameters/Jump/blend_position = 0
 parameters/Run/blend_position = 0

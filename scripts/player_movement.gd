@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED         = 150
 const GRAVITY       = 1000
 const JUMP_VELOCITY = -400
+var facing_dir = 1
 
 # cap downward speed (tweak this value to taste)
 const MAX_FALL_SPEED = 700
@@ -36,8 +37,14 @@ var wall_attach_timer = 0.0
 var is_attached_to_wall = false
 var current_wall_type = NORMAL_WALL_LAYER
 
+# ——— Animation STATE ———
+var idle = true
+var run = false
+var jump = false
+
 # ——— NODE REFERENCES ———
 @onready var rope = $Line2D
+@export var anim_tree : AnimationTree
 
 func _ready():
 	add_to_group("player")
@@ -96,6 +103,27 @@ func _input(event):
 			grapple_point = target
 			current_wall_type = NORMAL_WALL_LAYER
 
+func update_anim():
+	if is_on_floor(): 
+		jump = false
+		if velocity.length() == 0:
+			idle = true
+			run = false
+		else:
+			idle = false
+			run = true
+	else:
+		jump = true
+		run = false
+		idle = false
+		
+	anim_tree.set("parameters/conditions/Idle", idle)
+	anim_tree.set("parameters/conditions/Run", run)
+	anim_tree.set("parameters/conditions/Jump", jump)
+	
+	anim_tree.set("parameters/Idle/blend_position", facing_dir)
+	anim_tree.set("parameters/Run/blend_position", velocity.x)
+	anim_tree.set("parameters/Jump/blend_position", facing_dir)
 
 func die():
 	print("Player died!")
@@ -110,6 +138,9 @@ func _cap_fall_speed() -> void:
 		velocity.y = MAX_FALL_SPEED
 
 func _physics_process(delta):
+	# ——— UPDATE ANIMATIONS ———
+	update_anim()
+	
 	# ——— UPDATE COOLDOWN ———
 	if grapple_cool_timer > 0:
 		grapple_cool_timer = max(grapple_cool_timer - delta, 0)
@@ -216,6 +247,8 @@ func _physics_process(delta):
 
 	# horizontal momentum-based movement
 	var dir_x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	if dir_x != 0:
+		facing_dir = dir_x
 
 	var accel = 2000.0
 	var friction = 1800.0

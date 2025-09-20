@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsktqdx3tt7cd"]
+[gd_scene load_steps=7 format=3 uid="uid://bsktqdx3tt7cd"]
 
 [ext_resource type="Script" uid="uid://c1g3tn1opkuwj" path="res://scripts/next_level.gd" id="1_1m5ts"]
+[ext_resource type="Texture2D" uid="uid://cq2uinkdlelut" path="res://assets/sprites/portal.png" id="2_560ix"]
+[ext_resource type="Material" uid="uid://dug4rgowprxm6" path="res://assets/particles/portal_particles.tres" id="3_hpms3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn2et"]
 size = Vector2(40, 40)
+
+[sub_resource type="Gradient" id="Gradient_560ix"]
+offsets = PackedFloat32Array(0, 0.694805)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hpms3"]
+gradient = SubResource("Gradient_560ix")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="NextLevel" type="Node2D"]
 script = ExtResource("1_1m5ts")
@@ -11,16 +24,23 @@ script = ExtResource("1_1m5ts")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_bn2et")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_560ix")
 
-[node name="ColorRect" type="ColorRect" parent="Area2D"]
-offset_left = -21.0
-offset_top = -21.0
-offset_right = 19.0
-offset_bottom = 19.0
-color = Color(1.8771e-06, 0.751809, 0.224909, 1)
+[node name="PointLight2D" type="PointLight2D" parent="Area2D/Sprite2D"]
+position = Vector2(24, -24)
+color = Color(0.5, 2, 0.552, 1)
+energy = 0.72
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_hpms3")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D"]
+amount = 30
+lifetime = 3.0
+randomness = 0.4
+visibility_rect = Rect2(-150, -150, 300, 300)
+process_material = ExtResource("3_hpms3")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

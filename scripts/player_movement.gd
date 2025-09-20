@@ -165,7 +165,7 @@ func _physics_process(delta):
 				velocity.x = move_toward(velocity.x, 0, friction * delta)
 
 		# manual break on jump
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("jump"):
 			if grapple_connected and not is_attached_to_wall:
 				did_double_jump = false
 			
@@ -259,7 +259,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
 
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("jump"):
 		if on_ground:
 			velocity.y = JUMP_VELOCITY
 			on_ground = false

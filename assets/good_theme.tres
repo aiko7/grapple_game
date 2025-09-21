@@ -1,8 +1,13 @@
-[gd_resource type="Theme" load_steps=19 format=4 uid="uid://q0x0syx0vyye"]
+[gd_resource type="Theme" load_steps=27 format=4 uid="uid://q0x0syx0vyye"]
 
 [ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="1_6jflf"]
 [ext_resource type="Texture2D" uid="uid://bkr5itvdiy7qp" path="res://assets/sprites/buttons.png" id="2_6dp50"]
 [ext_resource type="StyleBox" uid="uid://dsvsfqmo6wenc" path="res://assets/button_texture.tres" id="3_6dp50"]
+[ext_resource type="Texture2D" uid="uid://tgyw2yqcnwp3" path="res://assets/sprites/slider_grabber_base.png" id="4_orc7m"]
+[ext_resource type="Texture2D" uid="uid://dmykqb2q7v16g" path="res://assets/sprites/slider_grabber_highlight.png" id="5_lpk6q"]
+[ext_resource type="Texture2D" uid="uid://dy3bkk1qeonfx" path="res://assets/sprites/slider_slider_01.png" id="6_lpk6q"]
+[ext_resource type="Texture2D" uid="uid://d05smeowcyvgr" path="res://assets/sprites/slider_slider_02.png" id="6_orc7m"]
+[ext_resource type="Texture2D" uid="uid://urnn10vyxa38" path="res://assets/sprites/slider_slider_03.png" id="7_ob5eg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_by6gu"]
 content_margin_left = 6.0
@@ -49,6 +54,42 @@ content_margin_right = 4.0
 content_margin_bottom = 5.0
 texture = ExtResource("2_6dp50")
 region_rect = Rect2(0, 36, 38, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dq4j8"]
+texture = ExtResource("6_orc7m")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 3.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 15, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ob5eg"]
+texture = ExtResource("7_ob5eg")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 3.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 15, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ogkfp"]
+texture = ExtResource("6_lpk6q")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 3.0
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 18, 12)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqf0k"]
 bg_color = Color(0, 0, 0.129412, 0.854902)
@@ -1145,6 +1186,11 @@ Button/styles/focus = SubResource("StyleBoxFlat_6dp50")
 Button/styles/hover = SubResource("StyleBoxTexture_qqf0k")
 Button/styles/normal = ExtResource("3_6dp50")
 Button/styles/pressed = SubResource("StyleBoxTexture_6dp50")
+HSlider/icons/grabber = ExtResource("4_orc7m")
+HSlider/icons/grabber_highlight = ExtResource("5_lpk6q")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_dq4j8")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_ob5eg")
+HSlider/styles/slider = SubResource("StyleBoxTexture_ogkfp")
 Panel/styles/panel = SubResource("StyleBoxFlat_qqf0k")
 RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkk2cilj1ivi3"]
+[gd_scene load_steps=15 format=3 uid="uid://dkk2cilj1ivi3"]
 
 [ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_qdk1p"]
 [ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="2_6mor5"]
@@ -80,10 +80,19 @@ Button/styles/hover = SubResource("StyleBoxTexture_rxw7c")
 Button/styles/normal = SubResource("StyleBoxTexture_oefhw")
 Button/styles/pressed = SubResource("StyleBoxTexture_qheto")
 
+[sub_resource type="LabelSettings" id="LabelSettings_6mor5"]
+font = ExtResource("2_6mor5")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ca4wi"]
+font = ExtResource("2_6mor5")
+font_size = 32
+
 [node name="Menus" type="CanvasLayer"]
 
 [node name="PauseMenu" type="Panel" parent="."]
 process_mode = 3
+visible = false
 clip_contents = true
 anchors_preset = -1
 anchor_left = -0.00607639
@@ -141,38 +150,40 @@ theme = SubResource("Theme_w3pfr")
 text = "Quit"
 
 [node name="SettingsMenu" type="Panel" parent="."]
-visible = false
-offset_right = 300.0
-offset_bottom = 300.0
+anchors_preset = -1
+anchor_right = 0.748264
+anchor_bottom = 0.554012
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 296.0
+offset_bottom = 299.0
 script = ExtResource("2_jjqb4")
 metadata/_edit_use_anchors_ = true
 
 [node name="MasterVolumeSlider" type="HSlider" parent="SettingsMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.613333
-anchor_right = 0.613333
-offset_left = 50.0
-offset_top = 140.0
-offset_right = 150.0
-offset_bottom = 156.0
+layout_mode = 0
+offset_left = 483.0
+offset_top = 400.0
+offset_right = 633.0
+offset_bottom = 440.0
 rotation = 4.71239
+theme = ExtResource("6_6mor5")
 min_value = -80.0
 max_value = 0.0
 value = -40.0
 tick_count = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="MusicVolumeSlider" type="HSlider" parent="SettingsMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.426667
-anchor_right = 0.426667
-offset_left = 50.0
-offset_top = 140.0
-offset_right = 150.0
-offset_bottom = 156.0
+anchor_left = -0.0395869
+anchor_right = -0.0395869
+offset_left = 676.0
+offset_top = 400.0
+offset_right = 826.0
+offset_bottom = 440.0
 rotation = 4.71239
+theme = ExtResource("6_6mor5")
 min_value = -60.0
 max_value = 20.0
 tick_count = 1
@@ -180,24 +191,46 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="SettingsMenu"]
 layout_mode = 0
-offset_top = 120.0
-offset_right = 45.0
-offset_bottom = 151.0
-text = "Back"
+offset_left = 516.0
+offset_top = 423.0
+offset_right = 630.0
+offset_bottom = 477.0
+theme = ExtResource("6_6mor5")
+text = "Close
+"
 metadata/_edit_use_anchors_ = true
 
+[node name="MasterVolumeLabel" type="Label" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 288.0
+offset_right = 462.0
+offset_bottom = 355.0
+text = "Master
+Volume"
+label_settings = SubResource("LabelSettings_6mor5")
+
+[node name="MusicVolumeLabel" type="Label" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 291.0
+offset_right = 787.0
+offset_bottom = 358.0
+text = "Music
+Volume"
+label_settings = SubResource("LabelSettings_ca4wi")
+
 [node name="InfoMenu" type="Panel" parent="."]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 1184.0
-offset_bottom = 710.0
+visible = false
+offset_right = 1192.0
+offset_bottom = 718.0
 script = ExtResource("3_jjqb4")
 
 [node name="Panel" type="Panel" parent="InfoMenu"]
 layout_mode = 0
-offset_left = 478.0
+offset_left = 470.0
 offset_top = 172.0
-offset_right = 678.0
+offset_right = 670.0
 offset_bottom = 409.0
 theme = ExtResource("6_6mor5")
 
@@ -215,14 +248,11 @@ Arrow keys to move around (Can also jump on space)
 Double jump resets after successfully grappling to a wall and breaking off before collision occurs."
 
 [node name="BackButton" type="Button" parent="InfoMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.437919
-anchor_top = 0.593315
-anchor_right = 0.437919
-anchor_bottom = 0.593315
-offset_right = 114.0
-offset_bottom = 54.0
+layout_mode = 0
+offset_left = 516.0
+offset_top = 423.0
+offset_right = 630.0
+offset_bottom = 477.0
 theme = ExtResource("6_6mor5")
 text = "Close"
 metadata/_edit_use_anchors_ = true

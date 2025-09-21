@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv70bfp2y1qrw"]
+[gd_scene load_steps=3 format=3 uid="uid://cv70bfp2y1qrw"]
 
 [ext_resource type="Script" uid="uid://bnbmuce61ab4d" path="res://scripts/UIManager.gd" id="1_ig7tw"]
+[ext_resource type="LabelSettings" uid="uid://jik187j6mrrd" path="res://assets/ui_settings/label_settings.tres" id="2_oc4u7"]
 
 [node name="Main" type="Node2D"]
 
@@ -19,6 +20,7 @@ offset_left = 1050.0
 offset_top = 52.0
 offset_right = 1090.0
 offset_bottom = 75.0
+label_settings = ExtResource("2_oc4u7")
 
 [node name="TextureRect" type="TextureRect" parent="UIManager/StarContainer"]
 layout_mode = 0

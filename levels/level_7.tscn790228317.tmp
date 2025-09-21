@@ -1,6 +1,5 @@
 [gd_scene load_steps=14 format=4 uid="uid://c1yur7e5h358k"]
 
-[ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_86l0o"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_jm8gk"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_3igfe"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_4pmw3"]
@@ -9,108 +8,35 @@
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="7_sbxnr"]
 [ext_resource type="TileSet" uid="uid://l7w5nhysyaij" path="res://assets/tile_sets/spikes_tile_set.tres" id="8_xp58y"]
 [ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="9_ieh1o"]
+[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="10_ydmfm"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="11_nwhq7"]
 [ext_resource type="Material" uid="uid://db6ehkuiso5ax" path="res://assets/particles/lvl_1_lava_particle2.tres" id="12_02co5"]
-[ext_resource type="Material" uid="uid://bdo2pw3xw37tc" path="res://assets/particles/lvl_7_particles.tres" id="13_4pmw3"]
+[ext_resource type="Script" uid="uid://chquf4sjlsspi" path="res://levels/movingportal.gd" id="12_4pmw3"]
 
-[sub_resource type="GDScript" id="GDScript_5cm8g"]
-script/source = "extends Node2D
+[sub_resource type="Curve2D" id="Curve2D_38k6x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 51.7021, 41.7391, 0, 0, 0, 0, 37.9787, 45, 0, 0, 0, 0, 24.5745, 39.4565, 0, 0, 0, 0, 13.4043, 30.3261, 0, 0, 0, 0, 5.10638, 15.6522, 0, 0, 0, 0, 2.96764, 7.93692, 0, 0, 0, 0, 6.6221, -4.786, 0, 0, 0, 0, 18.3976, -12.3921, 0, 0, 0, 0, 34.775, -4.50942, 0, 0, 0, 0, 47.3625, 5.58595, 0, 0, 0, 0, 55.8896, 15.9579, 0, 0, 0, 0, 59.0027, 24.2555, 0, 0, 0, 0, 55.5319, 35.8696)
+}
+point_count = 13
 
-# Ellipse parameters
-@export var ellipse_width: float = 200.0
-@export var ellipse_height: float = 100.0
-@export var speed: float = 2.0  # Speed of movement (radians per second)
-@export var center_offset: Vector2 = Vector2.ZERO  # Offset from starting position
-
-# Internal variables
-var time: float = 0.0
-var initial_position: Vector2
-
-func _ready():
-	# Store the initial position as the center of the ellipse
-	initial_position = position
-
-func _process(delta):
-	move_in_ellipse(delta)
-
-func move_in_ellipse(delta: float):
-	# Update time
-	time += delta * speed
-	
-	# Calculate elliptical position using parametric equations
-	var x = cos(time) * ellipse_width / 2.0
-	var y = sin(time) * ellipse_height / 2.0
-	
-	# Set the new position relative to the initial position + center offset
-	position = initial_position + center_offset + Vector2(x, y)
-"
-
-[node name="Level_2HARD" type="Node2D"]
-
-[node name="Player" parent="." groups=["player"] instance=ExtResource("1_86l0o")]
-position = Vector2(20, 30)
+[node name="Level 2" type="Node2D"]
 
 [node name="Levelborder" parent="." instance=ExtResource("2_3igfe")]
-visible = false
 
 [node name="Lava" parent="." instance=ExtResource("4_4pmw3")]
 visible = false
-position = Vector2(320, 440)
-scale = Vector2(1, 10)
-
-[node name="Lava3" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(100, 121)
-rotation = 1.5708
-scale = Vector2(1, 5)
-
-[node name="Lava4" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(320, 300)
-rotation = 1.5708
-scale = Vector2(1, 9)
-
-[node name="Lava5" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(460, 260)
-rotation = 1.5708
-scale = Vector2(1, 6)
-
-[node name="Lava7" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(580, 140)
-rotation = 1.5708
-scale = Vector2(27, 1)
-
-[node name="Lava6" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(240, 380)
-rotation = 1.5708
-
-[node name="Lava8" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(480, 240)
-rotation = 1.5708
-
-[node name="Lava9" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(680, 360)
-rotation = 1.5708
-
-[node name="Lava10" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(800, 360)
-rotation = 1.5708
+position = Vector2(322, 440)
+scale = Vector2(1.04, 10.4)
 
 [node name="Lava2" parent="." instance=ExtResource("4_4pmw3")]
 visible = false
-position = Vector2(340, 0)
+position = Vector2(340, 4)
 scale = Vector2(41, 1.012)
 
 [node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AAAAAAcAAAAAAAYAAAABAAcAAAABAAMAAAACAAcAAAABAAMAAAADAAcAAAABAAMAAAAEAAcAAAABAAMAAAAFAAcAAAAFAAYAAAAGAAcAAAABAAMAAAAHAAcAAAABAAMAAAAIAAcAAAABAAMAAAAJAAcAAAABAAYAAAAFAAYAAAADAAAAAAAQAA4AAAADAAIAAAAQAA0AAAADAAEAAAAQAAwAAAADAAEAAAAQAAsAAAADAAEAAAAQAAoAAAADAAEAAAAQAAkAAAADAAEAAAAQAAgAAAADAAEAAAAQAAcAAAADAAEAAAAQAAYAAAADAAEAAAAQAAUAAAADAAEAAAAQAAQAAAADAAEAAAAQAAMAAAADAAEAAAAQAAIAAAADAAEAAAAQAAEAAAADAAEAAAAQAAAAAAADAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAcAAAAAAAYAAAABAAcAAAABAAMAAAACAAcAAAABAAMAAAADAAcAAAABAAMAAAAEAAcAAAABAAMAAAAFAAcAAAAFAAYAAAAGAAcAAAABAAMAAAAHAAcAAAABAAMAAAAIAAcAAAABAAMAAAAJAAcAAAABAAYAAAAFAAYAAAADAAAAAAAQAA4AAAADAAIAAAAQAA0AAAADAAEAAAAQAAwAAAADAAEAAAAQAAsAAAADAAEAAAAQAAoAAAADAAEAAAAQAAkAAAADAAEAAAAQAAgAAAADAAEAAAAQAAcAAAADAAEAAAAQAAYAAAADAAEAAAAQAAUAAAADAAEAAAAQAAQAAAADAAEAAAAQAAMAAAADAAEAAAAQAAIAAAADAAEAAAAQAAEAAAADAAEAAAAQAAAAAAADAAAAAAAqAA0AAAAAAAYAAAArAA0AAAAGAAQAAAArAA4AAAAEAAYAAAAsAA4AAAABAAMAAAAtAA4AAAABAAMAAAAuAA4AAAABAAMAAAAvAA4AAAABAAYAAAA=")
 tile_set = ExtResource("5_38k6x")
 
 [node name="BreakGrappleTileMap" type="TileMapLayer" parent="."]
@@ -132,6 +58,9 @@ self_modulate = Color(1.8, 1.7, 1.5, 1)
 scale = Vector2(1.25, 1.25)
 tile_map_data = PackedByteArray("AAAAACAAAAAAAAAAAAABACAAAAABAAAAAAACACAAAAACAAAAAAADACAAAAADAAAAAAAEACAAAAAEAAAAAAAFACAAAAAAAAAAAAAGACAAAAABAAAAAAAHACAAAAACAAAAAAAIACAAAAADAAAAAAAJACAAAAAEAAAAAAAKACAAAAAAAAAAAAALACAAAAABAAAAAAAMACAAAAACAAAAAAANACAAAAADAAAAAAAOACAAAAAEAAAAAAAPACAAAAAAAAAAAAAQACAAAAABAAAAAAARACAAAAACAAAAAAASACAAAAADAAAAAAATACAAAAAEAAAAAAAUACAAAAAAAAAAAAAVACAAAAABAAAAAAAWACAAAAACAAAAAAAXACAAAAADAAAAAAAYACAAAAAEAAAAAAAZACAAAAAAAAAAAAAaACAAAAABAAAAAAAbACAAAAACAAAAAAAcACAAAAADAAAAAAAdACAAAAAEAAAAAAAeACAAAAAAAAAAAAAfACAAAAABAAAAAAAgACAAAAACAAAAAAAhACAAAAADAAAAAAAiACAAAAAEAAAAAAAjACAAAAAAAAAAAAAkACAAAAABAAAAAAAlACAAAAACAAAAAAAmACAAAAADAAAAAAAnACAAAAAEAAAAAAAoACAAAAAAAAAAAAApACAAAAABAAAAAAAqACAAAAACAAAAAAArACAAAAADAAAAAAAsACAAAAAEAAAAAAAtACAAAAAAAAAAAAAuACAAAAABAAAAAAAvACAAAAACAAAAAAAwACAAAAADAAAAAAAxACAAAAAEAAAAAAAyACAAAAAAAAAAAAAzACAAAAABAAAAAAA0ACAAAAACAAAAAAA1ACAAAAADAAAAAAA2ACAAAAAEAAAAAAA3ACAAAAAAAAAAAAA4ACAAAAADAAAAAAAAAAYAAAAAAAAAAAABAAYAAAABAAAAAAACAAYAAAACAAAAAAADAAYAAAADAAAAAAAEAAYAAAAEAAAAAAA=")
 tile_set = ExtResource("9_ieh1o")
+
+[node name="Main" parent="." instance=ExtResource("10_ydmfm")]
+position = Vector2(151, 85)
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 show_behind_parent = true
@@ -155,23 +84,19 @@ randomness = 0.41
 visibility_rect = Rect2(-570, 0, 1140, -150)
 process_material = ExtResource("12_02co5")
 
-[node name="MOVINGPORTAL2" type="Node2D" parent="."]
-script = SubResource("GDScript_5cm8g")
+[node name="MOVINGPORTAL" type="Node2D" parent="."]
+script = ExtResource("12_4pmw3")
 
-[node name="NextLevel" parent="MOVINGPORTAL2" instance=ExtResource("1_jm8gk")]
-position = Vector2(993, 491)
-scale = Vector2(1, 0.981)
-skew = -0.00967467
+[node name="Path2D" type="Path2D" parent="MOVINGPORTAL"]
+position = Vector2(898, 395)
+scale = Vector2(3.13333, 3.06667)
+curve = SubResource("Curve2D_38k6x")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MOVINGPORTAL/Path2D"]
+position = Vector2(51.7021, 41.7391)
+rotation = 2.90831
+
+[node name="NextLevel" parent="MOVINGPORTAL/Path2D/PathFollow2D" instance=ExtResource("1_jm8gk")]
+position = Vector2(917, 471)
 next_level_scene = "res://levels/level_3.tscn"
-current_level_number = 7
-
-[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
-z_index = -1
-position = Vector2(50, 124)
-amount = 24
-lifetime = 2.0
-preprocess = 1.0
-speed_scale = 0.2
-randomness = 0.41
-visibility_rect = Rect2(-50, 0, 100, -150)
-process_material = ExtResource("13_4pmw3")
+current_level_number = 2

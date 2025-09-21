@@ -15,6 +15,7 @@ const MAX_FALL_SPEED = 700
 @export var max_grapple_dist    = 200    # fixed hook range
 @export var grapple_cooldown    = 1.0    # seconds between shots
 @export var wall_attach_time    = 1.0    # seconds to stay attached to wall
+@export var no_double_jump_level = false
 
 # ——— WALL TYPE COLLISION LAYERS ———
 const NORMAL_WALL_LAYER = 1
@@ -266,7 +267,7 @@ func _physics_process(delta):
 		if on_ground:
 			velocity.y = JUMP_VELOCITY
 			on_ground = false
-		elif not did_double_jump:
+		elif not did_double_jump and not no_double_jump_level:
 			velocity.y = JUMP_VELOCITY
 			did_double_jump = true
 

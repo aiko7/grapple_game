@@ -25,43 +25,43 @@ columns = 5
 
 [node name="Button1" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 1"
+text = "1"
 
 [node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 2"
+text = "2"
 
 [node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 3"
+text = "3"
 
 [node name="Button4" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 4"
+text = "4"
 
 [node name="Button5" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 5"
+text = "5"
 
 [node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 6"
+text = "6 Hard"
 
 [node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 7"
+text = "7 Hard"
 
 [node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 8"
+text = "8 Hard"
 
 [node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 9"
+text = "9 Hard"
 
 [node name="Button10" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Level 10"
+text = "10 Hard"
 
 [node name="RenameButton" type="Button" parent="."]
 layout_mode = 0

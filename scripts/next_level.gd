@@ -3,10 +3,13 @@ extends Node2D
 @export var next_level_scene: String = "res://levels/level_2.tscn"
 @export var current_level_number: int = 1
 
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
-
+	
+	
 	# If player reached the exit of levels 1..5 and had all stars this run,
 	# mark the level "perfect" and unlock the corresponding +5 level (1->6, 2->7, ...).
 	if current_level_number >= 1 and current_level_number < 5:

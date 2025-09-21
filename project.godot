@@ -22,7 +22,7 @@ GameManager="*res://GameManager.tscn"
 
 [display]
 
-window/size/mode=3
+window/size/mode=4
 window/stretch/mode="canvas_items"
 
 [dotnet]

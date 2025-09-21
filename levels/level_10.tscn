@@ -95,6 +95,7 @@ position = Vector2(800, 440)
 [node name="Lava11" parent="." instance=ExtResource("4_pf0k2")]
 visible = false
 position = Vector2(900, 440)
+scale = Vector2(12, 1)
 
 [node name="Lava12" parent="." instance=ExtResource("4_pf0k2")]
 visible = false

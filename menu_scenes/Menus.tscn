@@ -244,7 +244,7 @@ theme = ExtResource("6_6mor5")
 text = "The goal of the game is to complete each level by making it to the portal. 
 Hard mode levels are unlocked by also collecting all of the stars in each level.
 
-Arrow keys to move around (Can also jump on space)
+WASD keys to move around (Can also jump on space)
 Double jump resets after successfully grappling to a wall and breaking off before collision occurs."
 
 [node name="BackButton" type="Button" parent="InfoMenu"]

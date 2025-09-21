@@ -34,6 +34,7 @@ stream = ExtResource("4_mh7xs")
 [node name="bg" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("6_wda1a")
+volume_db = 8.432
 autoplay = true
 bus = &"Music"
 parameters/looping = true

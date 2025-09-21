@@ -67,27 +67,27 @@ text = "5"
 [node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 theme = ExtResource("2_msioc")
-text = "6 Hard"
+text = "1 Hard"
 
 [node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 theme = ExtResource("2_msioc")
-text = "7 Hard"
+text = "2 Hard"
 
 [node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 theme = ExtResource("2_msioc")
-text = "8 Hard"
+text = "3 Hard"
 
 [node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 theme = ExtResource("2_msioc")
-text = "9 Hard"
+text = "4 Hard"
 
 [node name="Button10" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 theme = ExtResource("2_msioc")
-text = "10 Hard"
+text = "5 Hard"
 
 [node name="ResetButton" type="Button" parent="."]
 layout_mode = 0

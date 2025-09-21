@@ -163,7 +163,7 @@ position = Vector2(993, 491)
 scale = Vector2(1, 0.981)
 skew = -0.00967467
 next_level_scene = "res://levels/level_3.tscn"
-current_level_number = 7
+current_level_number = 8
 
 [node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
 z_index = -1

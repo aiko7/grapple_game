@@ -26,13 +26,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if current_level_number == 5 :
 			if GameManager.has_collected_all():
 				ProgressManager.mark_level_perfect(current_level_number)
-			# Unlock level N+5 (ProgressManager.unlock_level() internally bounds-checks)
+			
 				ProgressManager.unlock_level(current_level_number + 5)
+		
+			get_tree().change_scene_to_file("res://menu_scenes/victorymenu1.tscn")
+			
 
-	if current_level_number >=5:
+	if current_level_number >5:
 		get_tree().change_scene_to_file("res://menu_scenes/level_select.tscn")
 		
 	# small delay (keeps your original await)
-	else:
+	elif current_level_number<5:
 		await get_tree().create_timer(0).timeout
 		get_tree().change_scene_to_file(next_level_scene)

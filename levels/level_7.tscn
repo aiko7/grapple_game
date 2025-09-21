@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c1yur7e5h358k"]
+[gd_scene load_steps=14 format=4 uid="uid://c1yur7e5h358k"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_86l0o"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_jm8gk"]
@@ -9,7 +9,6 @@
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="7_sbxnr"]
 [ext_resource type="TileSet" uid="uid://l7w5nhysyaij" path="res://assets/tile_sets/spikes_tile_set.tres" id="8_xp58y"]
 [ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="9_ieh1o"]
-[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="10_ydmfm"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="11_nwhq7"]
 [ext_resource type="Material" uid="uid://db6ehkuiso5ax" path="res://assets/particles/lvl_1_lava_particle2.tres" id="12_02co5"]
 [ext_resource type="Material" uid="uid://8xy5akfucnje" path="res://assets/particles/basic_lava_particle.tres" id="12_38k6x"]
@@ -59,7 +58,7 @@ scale = Vector2(2, 1)
 
 [node name="NextLevel" parent="." instance=ExtResource("1_jm8gk")]
 position = Vector2(1094, 381)
-current_level_number = 6
+current_level_number = 7
 
 [node name="Lava2" parent="." instance=ExtResource("4_4pmw3")]
 visible = false
@@ -68,9 +67,6 @@ scale = Vector2(10.15, 1)
 
 [node name="Levelborder" parent="." instance=ExtResource("2_3igfe")]
 visible = false
-
-[node name="Main" parent="." instance=ExtResource("10_ydmfm")]
-position = Vector2(151, 85)
 
 [node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
 scale = Vector2(1.25, 1.25)

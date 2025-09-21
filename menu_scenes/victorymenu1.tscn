@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdsop7acfh6as"]
+
+[ext_resource type="Script" uid="uid://b81mqrjl71imn" path="res://menu_scenes/victorymenu_1.gd" id="1_mgty7"]
+[ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="2_o1vmf"]
+
+[node name="Victorymenu1" type="Node2D"]
+
+[node name="victorymenu1" type="Panel" parent="."]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1184.0
+offset_bottom = 710.0
+script = ExtResource("1_mgty7")
+
+[node name="Panel" type="Panel" parent="victorymenu1"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 172.0
+offset_right = 678.0
+offset_bottom = 409.0
+theme = ExtResource("2_o1vmf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="victorymenu1/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 193.0
+offset_bottom = 224.0
+theme = ExtResource("2_o1vmf")
+text = "The goal of the game is to complete each level by making it to the portal. 
+Hard mode levels are unlocked by also collecting all of the stars in each level.
+
+Arrow keys to move around (Can also jump on space)
+Double jump resets after successfully grappling to a wall and breaking off before collision occurs."
+
+[node name="Level Selector" type="Button" parent="victorymenu1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.437919
+anchor_top = 0.593315
+anchor_right = 0.437919
+anchor_bottom = 0.593315
+offset_right = 114.0
+offset_bottom = 54.0
+theme = ExtResource("2_o1vmf")
+text = "Levels"
+metadata/_edit_use_anchors_ = true

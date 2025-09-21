@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://c6bpebo6d0xsj"]
+[gd_scene load_steps=14 format=4 uid="uid://c6bpebo6d0xsj"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_6up2b"]
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_l3m5x"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="2_t207q"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_vflpa"]
-[ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/main.tscn" id="5_g7b2g"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="6_6s2qa"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="7_eo5pq"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="8_urb8h"]
@@ -27,9 +26,6 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_l3m5x")]
 position = Vector2(1050, 612)
-
-[node name="Main" parent="." instance=ExtResource("5_g7b2g")]
-position = Vector2(151, 85)
 
 [node name="BreakGrappleTileMap" type="TileMapLayer" parent="."]
 z_index = 2

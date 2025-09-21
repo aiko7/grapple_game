@@ -18,7 +18,7 @@
 [node name="level_1HARD" type="Node2D"]
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_86l0o")]
-position = Vector2(40, 64)
+position = Vector2(40, 172)
 
 [node name="Lava" parent="." instance=ExtResource("4_4pmw3")]
 visible = false

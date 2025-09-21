@@ -16,6 +16,7 @@
 [ext_resource type="Material" uid="uid://b5xd0oej14nwe" path="res://assets/particles/lvl_5_lava_particle2.tres" id="14_g7b2g"]
 
 [node name="Level5" type="Node2D"]
+position = Vector2(0, 1)
 
 [node name="NextLevel" parent="." instance=ExtResource("1_6up2b")]
 position = Vector2(577, 49)
@@ -25,7 +26,7 @@ current_level_number = 6
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_l3m5x")]
-position = Vector2(1050, 610)
+position = Vector2(1050, 612)
 
 [node name="Main" parent="." instance=ExtResource("5_g7b2g")]
 position = Vector2(151, 85)

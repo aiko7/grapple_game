@@ -17,7 +17,7 @@
 [node name="Level 3" type="Node2D"]
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_20opy")]
-position = Vector2(111, 251)
+position = Vector2(111, 252)
 
 [node name="NextLevel" parent="." instance=ExtResource("1_vkd0v")]
 position = Vector2(917, 471)

@@ -8,7 +8,7 @@ extends Node2D
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
-	
+	AudioManager.play_portal()
 	
 	# If player reached the exit of levels 1..5 and had all stars this run,
 	# mark the level "perfect" and unlock the corresponding +5 level (1->6, 2->7, ...).

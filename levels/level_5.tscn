@@ -25,7 +25,6 @@ current_level_number = 5
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("3_hokjj")]
-visible = false
 position = Vector2(529, 91)
 
 [node name="Lava" parent="." instance=ExtResource("6_sc6c1")]

@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 ProgressManager="*res://scripts/progress_manager.gd"
 GameManager="*res://GameManager.tscn"
+AudioManager="*res://AudioManager.tscn"
 
 [display]
 

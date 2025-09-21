@@ -25,6 +25,7 @@ const NO_GRAPPLE_LAYER = 3
 # ——— JUMP STATE ———
 var on_ground        = false
 var did_double_jump  = false
+var was_on_floor     = false        # <-- added for landing detection
 
 # ——— GRAPPLE STATE ———
 var is_grappling       = false
@@ -55,6 +56,9 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if grapple_cool_timer > 0 or is_grappling:
 			return
+
+		# play grapple/fire sound via AudioManager (persisting autoload)
+		AudioManager.play_grapple()                # <<-- added grapple sound call
 
 		var dir = (get_global_mouse_position() - global_position).normalized()
 		var target = global_position + dir * max_grapple_dist
@@ -127,6 +131,7 @@ func update_anim():
 	anim_tree.set("parameters/Jump/blend_position", facing_dir)
 
 func die():
+	AudioManager.play_death()
 	print("Player died!")
 	if get_tree()!=null:
 		get_tree().reload_current_scene()		
@@ -142,6 +147,17 @@ func _cap_fall_speed() -> void:
 		velocity.y = MAX_FALL_SPEED
 
 func _physics_process(delta):
+	# ——— LANDING DETECTION ———
+	var currently_on_floor = is_on_floor()
+	if not was_on_floor and currently_on_floor:
+		AudioManager.play_land()             
+	was_on_floor = currently_on_floor
+
+	if is_on_floor() and abs(velocity.x) > 10:     
+		AudioManager.play_walk()
+	else:
+		AudioManager.stop_walk()
+		
 	# ——— UPDATE ANIMATIONS ———
 	update_anim()
 	
@@ -267,9 +283,11 @@ func _physics_process(delta):
 		if on_ground:
 			velocity.y = JUMP_VELOCITY
 			on_ground = false
+			AudioManager.play_jump()            # <<-- play jump sound for normal jump
 		elif not did_double_jump and not no_double_jump_level:
 			velocity.y = JUMP_VELOCITY
 			did_double_jump = true
+			AudioManager.play_jump()            # <<-- play jump sound for double jump
 
 	rope.points = []
 	_cap_fall_speed()                         # one last clamp before the physics step

@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=4 uid="uid://c0kbfvdd3uty7"]
 
 [ext_resource type="Script" uid="uid://dkhnltqx7ctug" path="res://scripts/level_select.gd" id="1_lelcc"]
-[ext_resource type="Theme" uid="uid://bddk267pconk3" path="res://assets/good_theme.tres" id="2_msioc"]
+[ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="2_msioc"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="2_ntr8q"]
-[ext_resource type="Theme" uid="uid://0kflhtptb7gv" path="res://assets/good_theme_long.tres" id="3_d0rit"]
+[ext_resource type="Theme" uid="uid://csv8kf1tfvyv4" path="res://assets/good_theme_long.tres" id="3_d0rit"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="3_msioc"]
 [ext_resource type="SpriteFrames" uid="uid://dsb088pm0cgh6" path="res://assets/sprites/player_sprites.tres" id="4_d0rit"]
 

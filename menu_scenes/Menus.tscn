@@ -95,9 +95,11 @@ offset_left = 78.0
 offset_top = 37.0
 offset_right = 265.0
 offset_bottom = 257.0
-text = "sdasfd 
-test 
-hello"
+text = "The goal of the game is to complete each level by making it to the portal. 
+Hard mode levels are unlocked by also collecting all of the stars in each level.
+
+Arrow keys to move around (Can also jump on space)
+Double jump resets after successfully grappling to a wall and breaking off before collision occurs."
 
 [node name="BackButton" type="Button" parent="InfoMenu"]
 layout_mode = 1

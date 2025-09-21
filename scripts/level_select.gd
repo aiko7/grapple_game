@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	var resetButton = $RenameButton
+	var resetButton = $ResetButton
 	resetButton.pressed.connect(_on_reset_pressed)
 	
 	var grid = $VBoxContainer/GridContainer

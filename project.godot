@@ -30,6 +30,11 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="New Game Project"
 
+[global]
+
+Music=false
+Music.bptc=false
+
 [global_group]
 
 player=""

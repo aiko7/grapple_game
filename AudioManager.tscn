@@ -23,6 +23,7 @@ volume_db = 11.886
 
 [node name="death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_sxe6l")
+volume_db = 14.054
 
 [node name="grapple" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_wda1a")
@@ -33,4 +34,5 @@ stream = ExtResource("4_mh7xs")
 [node name="bg" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_wda1a")
 autoplay = true
+bus = &"Music"
 parameters/looping = true

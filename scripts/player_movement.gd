@@ -186,7 +186,7 @@ func _physics_process(delta):
 
 		# manual break on jump
 		if Input.is_action_just_pressed("jump"):
-			if grapple_connected and not is_attached_to_wall:
+			if grapple_connected and not is_attached_to_wall and hook_position == grapple_point:
 				did_double_jump = false
 			
 			is_grappling = false

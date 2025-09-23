@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://dkk2cilj1ivi3"]
 
-[ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_qdk1p"]
-[ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="2_6mor5"]
-[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settingsmenu.gd" id="2_jjqb4"]
-[ext_resource type="Texture2D" uid="uid://bkr5itvdiy7qp" path="res://assets/sprites/buttons.png" id="3_ca4wi"]
-[ext_resource type="Script" uid="uid://dnkx8y2h2m6u1" path="res://menu_scenes/infomenu.gd" id="3_jjqb4"]
-[ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="6_6mor5"]
+[ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_onxn3"]
+[ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="2_ob0hc"]
+[ext_resource type="Texture2D" uid="uid://bkr5itvdiy7qp" path="res://assets/sprites/buttons.png" id="3_5s1jx"]
+[ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settings_menu.gd" id="4_eqghv"]
+[ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="5_7ka3a"]
+[ext_resource type="Script" uid="uid://dnkx8y2h2m6u1" path="res://scripts/info_menu.gd" id="6_864k2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jflf"]
 content_margin_left = 6.0
@@ -45,11 +45,11 @@ content_margin_left = 6.0
 content_margin_top = 7.0
 content_margin_right = 4.0
 content_margin_bottom = 7.0
-texture = ExtResource("3_ca4wi")
+texture = ExtResource("3_5s1jx")
 region_rect = Rect2(0, 72, 76, 18)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oefhw"]
-texture = ExtResource("3_ca4wi")
+texture = ExtResource("3_5s1jx")
 region_rect = Rect2(0, 54, 76, 18)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qheto"]
@@ -73,7 +73,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 32
-Button/fonts/font = ExtResource("2_6mor5")
+Button/fonts/font = ExtResource("2_ob0hc")
 Button/styles/disabled = SubResource("StyleBoxFlat_6jflf")
 Button/styles/focus = SubResource("StyleBoxFlat_6dp50")
 Button/styles/hover = SubResource("StyleBoxTexture_rxw7c")
@@ -81,11 +81,11 @@ Button/styles/normal = SubResource("StyleBoxTexture_oefhw")
 Button/styles/pressed = SubResource("StyleBoxTexture_qheto")
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mor5"]
-font = ExtResource("2_6mor5")
+font = ExtResource("2_ob0hc")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_ca4wi"]
-font = ExtResource("2_6mor5")
+font = ExtResource("2_ob0hc")
 font_size = 32
 
 [node name="Menus" type="CanvasLayer"]
@@ -101,7 +101,7 @@ anchor_right = 0.731771
 anchor_bottom = 0.512346
 offset_right = 320.0
 offset_bottom = 320.0
-script = ExtResource("1_qdk1p")
+script = ExtResource("1_onxn3")
 metadata/_edit_use_anchors_ = true
 
 [node name="ResumeButton" type="Button" parent="PauseMenu"]
@@ -157,7 +157,7 @@ offset_left = -4.0
 offset_top = -1.0
 offset_right = 296.0
 offset_bottom = 299.0
-script = ExtResource("2_jjqb4")
+script = ExtResource("4_eqghv")
 metadata/_edit_use_anchors_ = true
 
 [node name="MasterVolumeSlider" type="HSlider" parent="SettingsMenu"]
@@ -167,7 +167,7 @@ offset_top = 400.0
 offset_right = 633.0
 offset_bottom = 440.0
 rotation = 4.71239
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 min_value = -80.0
 max_value = 0.0
 value = -40.0
@@ -183,7 +183,7 @@ offset_top = 400.0
 offset_right = 826.0
 offset_bottom = 440.0
 rotation = 4.71239
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 min_value = -60.0
 max_value = 20.0
 tick_count = 1
@@ -195,7 +195,7 @@ offset_left = 516.0
 offset_top = 423.0
 offset_right = 630.0
 offset_bottom = 477.0
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 text = "Close
 "
 metadata/_edit_use_anchors_ = true
@@ -224,7 +224,7 @@ label_settings = SubResource("LabelSettings_ca4wi")
 visible = false
 offset_right = 1192.0
 offset_bottom = 718.0
-script = ExtResource("3_jjqb4")
+script = ExtResource("6_864k2")
 
 [node name="Panel" type="Panel" parent="InfoMenu"]
 layout_mode = 0
@@ -232,7 +232,7 @@ offset_left = 470.0
 offset_top = 172.0
 offset_right = 670.0
 offset_bottom = 409.0
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="InfoMenu/Panel"]
 layout_mode = 0
@@ -240,7 +240,7 @@ offset_left = 6.0
 offset_top = 4.0
 offset_right = 193.0
 offset_bottom = 224.0
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 text = "The goal of the game is to complete each level by making it to the portal. 
 Hard mode levels are unlocked by also collecting all of the stars in each level.
 
@@ -253,6 +253,6 @@ offset_left = 516.0
 offset_top = 423.0
 offset_right = 630.0
 offset_bottom = 477.0
-theme = ExtResource("6_6mor5")
+theme = ExtResource("5_7ka3a")
 text = "Close"
 metadata/_edit_use_anchors_ = true

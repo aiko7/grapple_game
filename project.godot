@@ -18,8 +18,8 @@ config/icon="uid://dwjad466ex2tq"
 [autoload]
 
 ProgressManager="*res://scripts/progress_manager.gd"
-GameManager="*res://GameManager.tscn"
-AudioManager="*res://AudioManager.tscn"
+GameManager="*res://game_manager.tscn"
+AudioManager="*res://audio_manager.tscn"
 
 [display]
 

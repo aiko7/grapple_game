@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://b6mw8awu5akhm"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_3y4iq"]
-[ext_resource type="Script" uid="uid://brn5w6xh3liqy" path="res://levels/level_10light.gd" id="1_pf0k2"]
+[ext_resource type="Script" uid="uid://brn5w6xh3liqy" path="res://scripts/level_10light.gd" id="1_pf0k2"]
 [ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_j1kd0"]
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="3_qohi0"]
 [ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_pf0k2"]

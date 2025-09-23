@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv70bfp2y1qrw"]
 
-[ext_resource type="Script" uid="uid://bnbmuce61ab4d" path="res://scripts/UIManager.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bnbmuce61ab4d" path="res://scripts/ui_manager.gd" id="1_ig7tw"]
 [ext_resource type="LabelSettings" uid="uid://jik187j6mrrd" path="res://assets/ui_settings/label_settings.tres" id="2_oc4u7"]
 
 [node name="Main" type="Node2D"]

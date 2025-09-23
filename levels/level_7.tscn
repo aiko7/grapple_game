@@ -12,7 +12,7 @@
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="11_nwhq7"]
 [ext_resource type="Material" uid="uid://db6ehkuiso5ax" path="res://assets/particles/lvl_1_lava_particle2.tres" id="12_02co5"]
 [ext_resource type="Material" uid="uid://8xy5akfucnje" path="res://assets/particles/basic_lava_particle.tres" id="12_38k6x"]
-[ext_resource type="Script" uid="uid://b3l8euwrk4yev" path="res://levels/movingwall.gd" id="14_cl460"]
+[ext_resource type="Script" uid="uid://b3l8euwrk4yev" path="res://scripts/moving_wall.gd" id="14_cl460"]
 
 [node name="level_1HARD" type="Node2D"]
 

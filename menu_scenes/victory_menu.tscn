@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=4 uid="uid://bdsop7acfh6as"]
 
-[ext_resource type="Script" uid="uid://b81mqrjl71imn" path="res://menu_scenes/victorymenu_1.gd" id="1_mgty7"]
+[ext_resource type="Script" uid="uid://b81mqrjl71imn" path="res://scripts/victorymenu_1.gd" id="1_mgty7"]
 [ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="2_o1vmf"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="3_o1vmf"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="4_d51cy"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/star.tscn" id="4_d51cy"]
 
 [node name="Victorymenu1" type="Node2D"]
 

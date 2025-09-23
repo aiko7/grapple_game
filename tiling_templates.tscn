@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://8gnhcdmqv20c"]
+
+[ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="1_30oh6"]
+[ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="2_q1acu"]
+[ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="3_2m86c"]
+[ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="4_qo5qf"]
+[ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="5_vty5w"]
+[ext_resource type="TileSet" uid="uid://l7w5nhysyaij" path="res://assets/tile_sets/spikes_tile_set.tres" id="6_hfjg0"]
+
+[node name="Tiling" type="Node2D"]
+
+[node name="BreakGrappleTileMap" type="TileMapLayer" parent="."]
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("1_30oh6")
+
+[node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
+show_behind_parent = true
+position = Vector2(1, 0)
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("2_q1acu")
+
+[node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("3_2m86c")
+
+[node name="LavaTileMapLayer" type="TileMapLayer" parent="."]
+self_modulate = Color(1.8, 1.7, 1.5, 1)
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("4_qo5qf")
+
+[node name="GrappleWallTileMap" type="TileMapLayer" parent="."]
+position = Vector2(5.96046e-08, 0)
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("5_vty5w")
+
+[node name="SpikeTileMap" type="TileMapLayer" parent="."]
+scale = Vector2(1.25, 1.25)
+tile_set = ExtResource("6_hfjg0")

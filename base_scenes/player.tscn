@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://stqfh0go0d3c"]
+[gd_scene load_steps=33 format=3 uid="uid://stqfh0go0d3c"]
 
 [ext_resource type="Script" uid="uid://cgb8coqhsfhog" path="res://scripts/player_movement.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dxot6fe5k1vxa" path="res://assets/sprite_sheets/player_idle_sprite.png" id="3_2qjss"]
@@ -220,6 +220,9 @@ states/Start/position = Vector2(214, 108)
 transitions = ["Idle", "Run", SubResource("AnimationNodeStateMachineTransition_8udvs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_o45lo"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_2qjss"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_7y62w"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_c72js"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_ya6h1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4mmd0")]
 graph_offset = Vector2(-7, -62)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o45lo"]
+size = Vector2(12, 16)
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree")]
 collision_mask = 7
 script = ExtResource("1_onrkg")
@@ -270,3 +273,12 @@ parameters/conditions/Run = false
 parameters/Idle/blend_position = 0.664179
 parameters/Jump/blend_position = 0
 parameters/Run/blend_position = 0
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_o45lo")
+debug_color = Color(0.956863, 0.462745, 0.490196, 0.243137)
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

@@ -1,10 +1,8 @@
-[gd_scene load_steps=15 format=4 uid="uid://4v18ykln4jk1"]
+[gd_scene load_steps=13 format=4 uid="uid://4v18ykln4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_v5uil"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="2_5722l"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="4_ep78u"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="5_5722l"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/star.tscn" id="6_ilhis"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="6_ilhis"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="7_sd18g"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="8_vm7no"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="9_hbb88"]
@@ -20,27 +18,10 @@
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_v5uil")]
 position = Vector2(40, 172)
 
-[node name="Lava" parent="." instance=ExtResource("5_5722l")]
-visible = false
-position = Vector2(200, 160)
-
-[node name="Lava3" parent="." instance=ExtResource("5_5722l")]
-visible = false
-position = Vector2(240, 300)
-scale = Vector2(2, 1)
-
 [node name="NextLevel" parent="." instance=ExtResource("2_5722l")]
 position = Vector2(1094, 358)
 next_level_scene = "res://levels/level_3.tscn"
 current_level_number = 2
-
-[node name="Lava2" parent="." instance=ExtResource("5_5722l")]
-visible = false
-position = Vector2(440, 320)
-scale = Vector2(10.15, 1)
-
-[node name="Levelborder" parent="." instance=ExtResource("4_ep78u")]
-visible = false
 
 [node name="Star" parent="." instance=ExtResource("6_ilhis")]
 position = Vector2(149, 587)

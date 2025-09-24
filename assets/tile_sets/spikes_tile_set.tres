@@ -18,14 +18,21 @@ polygon = PackedVector2Array(-8, 8, -8, 5.01412, -7.05212, 5.04647, -7, 1, -6, 1
 texture = ExtResource("1_dqppm")
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dqppm")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.04315, -8, 2, -6, 2, -3, 8, -1, 5, 4, -8, 8)
 1:0/0 = 0
 1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fwbqf")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 5.04315, -8, -2, -6, -2, -3, -8, -1, -5, 4, 8, 8)
 2:0/0 = 0
 2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0xcmk")
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -5.04315, -6, 2, -3, 2, -1, 8, 4, 5, 8, -8)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(3, -8, -3, -8, -8, -3, -8, 3, -3, 8, 3, 8, 8, 3, 8, -3)
 4:0/0 = 0
 4:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dxohk")
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 5.04315, -6, -2, -3, -2, -1, -8, 4, -5, 8, 8)
 
 [resource]
 occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_fwbqf")

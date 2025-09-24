@@ -1,10 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://bvbkrgybtmw43"]
+[gd_scene load_steps=12 format=4 uid="uid://bvbkrgybtmw43"]
 
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="1_bmgug"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_vkd0v"]
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="2_20opy"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_lfnxh"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/star.tscn" id="6_8l0e1"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="6_8l0e1"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="7_wj73x"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="8_0unm6"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="9_q42ux"]
@@ -23,51 +21,6 @@ position = Vector2(111, 252)
 position = Vector2(917, 471)
 next_level_scene = "res://levels/level_5.tscn"
 current_level_number = 4
-
-[node name="Levelborder" parent="." instance=ExtResource("1_bmgug")]
-visible = false
-
-[node name="Lava" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(200, 60)
-scale = Vector2(1, 5)
-
-[node name="Lava2" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(200, 240)
-scale = Vector2(1, 5)
-
-[node name="Lava3" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(340, 100)
-scale = Vector2(1, 5)
-
-[node name="Lava4" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(340, 300)
-scale = Vector2(1, 5)
-
-[node name="Lava5" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(500, 60)
-scale = Vector2(1, 5)
-
-[node name="Lava6" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(500, 260)
-scale = Vector2(1, 5)
-
-[node name="Lava7" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(740, 360)
-rotation = 1.5708
-scale = Vector2(1, 5)
-
-[node name="Lava8" parent="." instance=ExtResource("4_lfnxh")]
-visible = false
-position = Vector2(920, 320)
-rotation = 1.5708
-scale = Vector2(1, 5)
 
 [node name="Star" parent="." instance=ExtResource("6_8l0e1")]
 position = Vector2(496, 416)

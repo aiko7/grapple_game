@@ -1,9 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://c1yur7e5h358k"]
+[gd_scene load_steps=12 format=4 uid="uid://c1yur7e5h358k"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_86l0o"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_jm8gk"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_3igfe"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_4pmw3"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="5_38k6x"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="6_cl460"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="7_sbxnr"]
@@ -19,54 +17,9 @@
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_86l0o")]
 position = Vector2(40, 172)
 
-[node name="Lava" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(200, 160)
-
-[node name="Lava5" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(240, 300)
-scale = Vector2(2, 1)
-
-[node name="Lava7" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(180, 480)
-
-[node name="Lava8" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(660, 380)
-scale = Vector2(1, 2)
-
-[node name="Lava9" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(820, 340)
-scale = Vector2(5, 1)
-
-[node name="Lava6" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(380, 300)
-
-[node name="Lava4" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(820, 340)
-scale = Vector2(5, 1)
-
-[node name="Lava3" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(240, 300)
-scale = Vector2(2, 1)
-
 [node name="NextLevel" parent="." instance=ExtResource("1_jm8gk")]
 position = Vector2(1094, 381)
 current_level_number = 7
-
-[node name="Lava2" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(440, 320)
-scale = Vector2(10.15, 1)
-
-[node name="Levelborder" parent="." instance=ExtResource("2_3igfe")]
-visible = false
 
 [node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
 scale = Vector2(1.25, 1.25)
@@ -129,11 +82,6 @@ process_material = ExtResource("12_02co5")
 
 [node name="MOVINGWALL" type="Node2D" parent="."]
 script = ExtResource("14_cl460")
-
-[node name="Lava4" parent="MOVINGWALL" instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(0, -1)
-scale = Vector2(1, 50)
 
 [node name="SpikeTileMap" type="TileMapLayer" parent="MOVINGWALL"]
 scale = Vector2(1.25, 1.25)

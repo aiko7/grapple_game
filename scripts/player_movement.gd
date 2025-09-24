@@ -292,3 +292,7 @@ func _physics_process(delta):
 	rope.points = []
 	_cap_fall_speed()                         # one last clamp before the physics step
 	move_and_slide()
+
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	die()

@@ -1,10 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://bvbkrgybtmw43"]
+[gd_scene load_steps=12 format=4 uid="uid://bvbkrgybtmw43"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_v5uil"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="2_5722l"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="4_ep78u"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="5_5722l"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/star.tscn" id="6_ilhis"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="6_ilhis"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="7_sd18g"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="8_vm7no"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="9_hbb88"]
@@ -23,19 +21,6 @@ position = Vector2(24, 152)
 position = Vector2(917, 471)
 next_level_scene = "res://levels/level_4.tscn"
 current_level_number = 3
-
-[node name="Levelborder" parent="." instance=ExtResource("4_ep78u")]
-visible = false
-
-[node name="Lava" parent="." instance=ExtResource("5_5722l")]
-visible = false
-position = Vector2(320, 440)
-scale = Vector2(1.04, 10.4)
-
-[node name="Lava2" parent="." instance=ExtResource("5_5722l")]
-visible = false
-position = Vector2(340, 4)
-scale = Vector2(41, 1.012)
 
 [node name="Star" parent="." instance=ExtResource("6_ilhis")]
 position = Vector2(72, 576)

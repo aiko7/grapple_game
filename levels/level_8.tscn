@@ -1,9 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://c1yur7e5h358k"]
+[gd_scene load_steps=12 format=4 uid="uid://c1yur7e5h358k"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_86l0o"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_jm8gk"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_3igfe"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_4pmw3"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="5_38k6x"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="6_cl460"]
 [ext_resource type="TileSet" uid="uid://dumwoh0r2igjm" path="res://assets/tile_sets/basic_tiles.tres" id="7_sbxnr"]
@@ -49,63 +47,6 @@ func move_in_ellipse(delta: float):
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_86l0o")]
 position = Vector2(20, 30)
-
-[node name="Levelborder" parent="." instance=ExtResource("2_3igfe")]
-visible = false
-
-[node name="Lava" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(320, 440)
-scale = Vector2(1, 10)
-
-[node name="Lava3" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(100, 121)
-rotation = 1.5708
-scale = Vector2(1, 5)
-
-[node name="Lava4" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(320, 300)
-rotation = 1.5708
-scale = Vector2(1, 9)
-
-[node name="Lava5" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(460, 260)
-rotation = 1.5708
-scale = Vector2(1, 6)
-
-[node name="Lava7" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(580, 140)
-rotation = 1.5708
-scale = Vector2(27, 1)
-
-[node name="Lava6" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(240, 380)
-rotation = 1.5708
-
-[node name="Lava8" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(480, 240)
-rotation = 1.5708
-
-[node name="Lava9" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(680, 360)
-rotation = 1.5708
-
-[node name="Lava10" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(800, 360)
-rotation = 1.5708
-
-[node name="Lava2" parent="." instance=ExtResource("4_4pmw3")]
-visible = false
-position = Vector2(340, 0)
-scale = Vector2(41, 1.012)
 
 [node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)

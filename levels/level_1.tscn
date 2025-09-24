@@ -1,10 +1,8 @@
-[gd_scene load_steps=16 format=4 uid="uid://4v18ykln4jk1"]
+[gd_scene load_steps=14 format=4 uid="uid://4v18ykln4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_n46q3"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="2_btoec"]
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="3_gwceb"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="5_3sk1a"]
-[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/star.tscn" id="8_l53as"]
+[ext_resource type="PackedScene" uid="uid://cw2woqpjt82d" path="res://base_scenes/Star.tscn" id="8_l53as"]
 [ext_resource type="PackedScene" uid="uid://cv70bfp2y1qrw" path="res://menu_scenes/star_counter.tscn" id="9_3sk1a"]
 [ext_resource type="TileSet" uid="uid://doq6b26s1diwl" path="res://assets/tile_sets/background_tile_set.tres" id="10_08mmt"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="10_aerfg"]
@@ -20,9 +18,6 @@
 
 [node name="NextLevel" parent="." instance=ExtResource("3_gwceb")]
 position = Vector2(577, 49)
-
-[node name="Levelborder" parent="." instance=ExtResource("5_3sk1a")]
-visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_n46q3")]
 position = Vector2(1066, 612)
@@ -133,94 +128,3 @@ speed_scale = 0.2
 randomness = 0.41
 visibility_rect = Rect2(-90, 0, 180, -150)
 process_material = ExtResource("14_vjtdm")
-
-[node name="Lava" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(379, 120)
-
-[node name="Lava16" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(700, 600)
-
-[node name="Lava17" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(900, 600)
-
-[node name="Lava11" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(840, 0)
-
-[node name="Lava12" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(920, 0)
-
-[node name="Lava2" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(280, 0)
-
-[node name="Lava4" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(0, 19)
-
-[node name="Lava5" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(0, 120)
-
-[node name="Lava13" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(0, 400)
-
-[node name="Lava6" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(0, 200)
-scale = Vector2(1, 2)
-
-[node name="Lava18" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(1120, 540)
-scale = Vector2(1, 2)
-
-[node name="Lava3" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(220, 120)
-scale = Vector2(3, 1)
-
-[node name="Lava7" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(280, 260)
-scale = Vector2(7, 1)
-
-[node name="Lava19" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(340, 480)
-scale = Vector2(9, 1)
-
-[node name="Lava20" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(660, 480)
-scale = Vector2(12, 1)
-
-[node name="Lava8" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(320, 240)
-scale = Vector2(4, 1)
-
-[node name="Lava10" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(620, 260)
-scale = Vector2(4, 1)
-
-[node name="Lava9" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(360, 220)
-scale = Vector2(2, 1)
-
-[node name="Lava14" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(380, 600)
-scale = Vector2(2, 1)
-
-[node name="Lava15" parent="." instance=ExtResource("2_btoec")]
-visible = false
-position = Vector2(760, 540)
-scale = Vector2(2, 1)

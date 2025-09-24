@@ -1,9 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://bfagdm3vmi4k7"]
+[gd_scene load_steps=13 format=4 uid="uid://bfagdm3vmi4k7"]
 
 [ext_resource type="PackedScene" uid="uid://bsktqdx3tt7cd" path="res://base_scenes/next_level.tscn" id="1_2b88s"]
 [ext_resource type="PackedScene" uid="uid://stqfh0go0d3c" path="res://base_scenes/player.tscn" id="1_k2ajo"]
-[ext_resource type="PackedScene" uid="uid://ceh3ixywfr58n" path="res://base_scenes/level_border.tscn" id="2_4mk42"]
-[ext_resource type="PackedScene" uid="uid://ch112x2tan8xa" path="res://base_scenes/lava.tscn" id="4_6kkia"]
 [ext_resource type="TileSet" uid="uid://d1r0s61jgq6ur" path="res://assets/tile_sets/no_grapple_tiles.tres" id="5_fksli"]
 [ext_resource type="TileSet" uid="uid://cqklnlbldhs8a" path="res://assets/tile_sets/break_grapple_tiles.tres" id="6_lyejb"]
 [ext_resource type="TileSet" uid="uid://0yejy871ctsw" path="res://assets/tile_sets/lava_tile_set.tres" id="7_85qo6"]
@@ -40,56 +38,6 @@ no_double_jump_level = true
 position = Vector2(917, 471)
 next_level_scene = "res://levels/level_4.tscn"
 current_level_number = 9
-
-[node name="Levelborder" parent="." instance=ExtResource("2_4mk42")]
-
-[node name="Lava" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(200, 60)
-scale = Vector2(1, 5)
-
-[node name="Lava2" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(200, 240)
-scale = Vector2(1, 5)
-
-[node name="Lava3" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(340, 100)
-scale = Vector2(1, 5)
-
-[node name="Lava4" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(340, 300)
-scale = Vector2(1, 5)
-
-[node name="Lava5" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(500, 60)
-scale = Vector2(1, 5)
-
-[node name="Lava6" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(500, 260)
-scale = Vector2(1, 5)
-
-[node name="Lava7" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(740, 360)
-rotation = 1.5708
-scale = Vector2(1, 5)
-
-[node name="Lava8" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(920, 320)
-rotation = 1.5708
-scale = Vector2(1, 5)
-
-[node name="Lava9" parent="." instance=ExtResource("4_6kkia")]
-visible = false
-position = Vector2(880, 420)
-rotation = 1.5708
-scale = Vector2(4, 1)
 
 [node name="NoGrappleTileMap" type="TileMapLayer" parent="."]
 scale = Vector2(1.25, 1.25)

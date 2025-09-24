@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://cw2woqpjt82d"]
 
-[ext_resource type="Script" uid="uid://c7gmncxopbtum" path="res://scripts/star.gd" id="1_1c4s2"]
+[ext_resource type="Script" uid="uid://c7gmncxopbtum" path="res://scripts/Star.gd" id="1_1c4s2"]
 [ext_resource type="AudioStream" uid="uid://ce8oq8mbsmqbq" path="res://assets/sounds/star.mp3" id="3_fkh8b"]
 [ext_resource type="SpriteFrames" uid="uid://b61sx8fn50h77" path="res://assets/sprite_sheets/star_anim.tres" id="4_c2f1u"]
-[ext_resource type="Script" path="res://scripts/particle_remover.gd" id="4_i3xx0"]
+[ext_resource type="Script" uid="uid://6c8p3cg1bbjb" path="res://scripts/particle_remover.gd" id="4_i3xx0"]
 [ext_resource type="Texture2D" uid="uid://jpo8hfei4jy8" path="res://assets/particles/star.png" id="4_tqa0o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j24n3"]

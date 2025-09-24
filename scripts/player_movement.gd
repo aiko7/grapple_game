@@ -46,6 +46,7 @@ var jump = false
 
 # ——— NODE REFERENCES ———
 @onready var rope = $Line2D
+@onready var jumpVfx = $JumpVFX
 @export var anim_tree : AnimationTree
 
 func _ready():
@@ -284,10 +285,23 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			on_ground = false
 			AudioManager.play_jump()            # <<-- play jump sound for normal jump
+			
+			var newJump = jumpVfx.duplicate()
+			get_parent().add_child(newJump)
+			newJump.position = jumpVfx.global_position
+			newJump.emitting = true
+			newJump.get_child(0).start()
+			
 		elif not did_double_jump and not no_double_jump_level:
 			velocity.y = JUMP_VELOCITY
 			did_double_jump = true
 			AudioManager.play_jump()            # <<-- play jump sound for double jump
+			
+			var newJump = jumpVfx.duplicate()
+			get_parent().add_child(newJump)
+			newJump.position = jumpVfx.global_position
+			newJump.emitting = true
+			newJump.get_child(0).start()
 
 	rope.points = []
 	_cap_fall_speed()                         # one last clamp before the physics step

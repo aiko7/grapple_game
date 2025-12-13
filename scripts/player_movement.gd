@@ -135,7 +135,7 @@ func die():
 	AudioManager.play_death()
 	print("Player died!")
 	if get_tree()!=null:
-		get_tree().reload_current_scene()		
+		get_tree().reload_current_scene.call_deferred()		
 	else:
 		call_deferred("_reload_scene_deferred")
 

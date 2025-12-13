@@ -261,7 +261,7 @@ default_color = Color(0.886275, 0.196078, 0.258824, 1)
 begin_cap_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.6, 1.6)
 position_smoothing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Camera2D"]

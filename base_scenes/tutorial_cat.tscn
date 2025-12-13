@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwf5i5kqlac3h"]
+
+[ext_resource type="SpriteFrames" uid="uid://dv45gjh0ect67" path="res://assets/sprite_sheets/cat_anim.tres" id="1_28vun"]
+
+[node name="TutorialCat" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_28vun")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.449822

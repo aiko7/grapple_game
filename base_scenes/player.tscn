@@ -220,7 +220,7 @@ states/Run/node = SubResource("AnimationNodeBlendSpace1D_kbbe6")
 states/Run/position = Vector2(665, 32)
 states/Start/position = Vector2(214, 108)
 transitions = ["Idle", "Run", SubResource("AnimationNodeStateMachineTransition_8udvs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_o45lo"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_2qjss"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_7y62w"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_c72js"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_ya6h1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4mmd0")]
-graph_offset = Vector2(-7, -62)
+graph_offset = Vector2(-35, -39)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7y62w"]
 particles_animation = true

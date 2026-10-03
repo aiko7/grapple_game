@@ -1,7 +1,11 @@
 extends Node2D
 
+@export_multiline var text_area: String = ""
+
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var cat_menu: Panel = $CatMenu
+
+var text_label: RichTextLabel
 
 signal leftInfoArea()
 
@@ -10,6 +14,14 @@ func _ready():
 	cat_menu.global_position.y -= cat_menu.size.y*cat_menu.scale.y + 15
 	cat_menu.global_position.x -= (cat_menu.size.x*cat_menu.scale.x)/2
 	
+	text_label = cat_menu.get_child(0)
+	
+	if text_area != "":
+		text_label.clear()
+		text_label.append_text(text_area)
+	
+	if self.scale.x <= 0:
+		cat_menu.scale.x *= -1
 
 func _on_interact():
 	cat_menu.show()

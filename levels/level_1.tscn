@@ -65,8 +65,15 @@ tile_set = ExtResource("11_aerfg")
 position = Vector2(749, 278)
 
 [node name="TutorialCat" parent="." instance=ExtResource("14_bgw3c")]
-z_index = -1
 position = Vector2(1081, 612)
+scale = Vector2(-1, 1)
+text_area = "Move with WASD keys
+(jump on W or space)
+
+Use the mouse pointer
+to aim and left click to
+shoot the grappling hook
+(more detailed info in the menu)"
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 show_behind_parent = true
@@ -122,3 +129,9 @@ speed_scale = 0.2
 randomness = 0.41
 visibility_rect = Rect2(-90, 0, 180, -150)
 process_material = ExtResource("14_vjtdm")
+
+[node name="TutorialCat2" parent="." instance=ExtResource("14_bgw3c")]
+position = Vector2(65, 612)
+text_area = "You can jump once more in the air
+
+The jump resets each time you break the grappling hook (by jumping) before you reach the wall"

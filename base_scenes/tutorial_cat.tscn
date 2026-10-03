@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dwf5i5kqlac3h"]
+[gd_scene load_steps=18 format=3 uid="uid://dwf5i5kqlac3h"]
 
 [ext_resource type="Texture2D" uid="uid://bvfn6uyrx6ma8" path="res://assets/sprite_sheets/cat_idle.png" id="1_28vun"]
 [ext_resource type="Script" uid="uid://xq6fe6rea3v8" path="res://scripts/tutorial_cat.gd" id="1_g5n37"]
@@ -155,6 +155,9 @@ states/Cat_Spawn/position = Vector2(362, 99)
 transitions = ["Cat_Spawn", "Cat_Idle", SubResource("AnimationNodeStateMachineTransition_8lh6t"), "Start", "Cat_Spawn", SubResource("AnimationNodeStateMachineTransition_4ietp")]
 graph_offset = Vector2(37, 17)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwr4u"]
+radius = 224.009
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_6773r"]
 radius = 56.1427
 
@@ -162,12 +165,11 @@ radius = 56.1427
 radius = 104.005
 
 [node name="TutorialCat" type="Node2D"]
-z_index = -234
+z_index = -1
 script = ExtResource("1_g5n37")
 
 [node name="CatSprite" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(-1, 1)
 texture = ExtResource("1_28vun")
 hframes = 6
 vframes = 6
@@ -187,23 +189,33 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_8lh6t")
 anim_player = NodePath("../AnimationPlayer")
 
+[node name="SpawnArea(not implemented)" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea(not implemented)"]
+shape = SubResource("CircleShape2D_pwr4u")
+debug_color = Color(0.660203, 0.365998, 0.913073, 0.42)
+
 [node name="InteractionArea" parent="." instance=ExtResource("4_g5n37")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_6773r")
 
 [node name="InfoArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 32768
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InfoArea"]
 shape = SubResource("CircleShape2D_3624f")
+debug_color = Color(0.293415, 0.617454, 0.355496, 0.42)
 
 [node name="CatMenu" type="Panel" parent="."]
 visible = false
 z_index = 4
-offset_right = 198.0
-offset_bottom = 278.0
+offset_right = 208.0
+offset_bottom = 144.0
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("6_pwr4u")
 
@@ -211,14 +223,16 @@ theme = ExtResource("6_pwr4u")
 layout_mode = 0
 offset_left = 6.0
 offset_top = 4.0
-offset_right = 192.0
-offset_bottom = 290.0
+offset_right = 200.0
+offset_bottom = 142.0
 theme = ExtResource("6_pwr4u")
-text = "The goal of the game is to complete each level by making it to the portal. 
-Hard mode levels are unlocked by also collecting all of the stars in each level.
+text = "Move with WASD keys
+(jump on W or space)
 
-WASD keys to move around (Can also jump on space)
-Double jump resets after successfully grappling to a wall and breaking off before collision occurs."
+Use the mouse pointer
+to aim and left click to
+shoot the grappling hook
+(more detailed info in the menu)"
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="body_exited" from="InfoArea" to="." method="_on_info_area_body_exited"]

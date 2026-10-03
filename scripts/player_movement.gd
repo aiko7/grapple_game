@@ -308,5 +308,5 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_hurtbox_body_entered(body: Node2D) -> void:
+func _on_hurtbox_body_entered(_body: Node2D) -> void:
 	die()

@@ -239,7 +239,8 @@ anim_speed_max = 2.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o45lo"]
 size = Vector2(12, 16)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree") groups=["player"]]
+collision_layer = 32769
 collision_mask = 7
 script = ExtResource("1_onrkg")
 anim_tree = NodePath("AnimationTree")

@@ -96,7 +96,7 @@ func count_total_stars() -> void:
 	_update_ui()
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("open_level_selector"):
 		get_tree().change_scene_to_file("res://menu_scenes/level_select.tscn")
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba0mo5ovrtr68"]
+
+[ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="1_uotnq"]
+[ext_resource type="Script" uid="uid://4cfapwma4jbt" path="res://base_scenes/interaction/interaction_manager.gd" id="1_uy57j"]
+
+[node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_uy57j")
+
+[node name="Label" type="Label" parent="."]
+z_index = -1
+offset_right = 96.0
+offset_bottom = 35.0
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("1_uotnq")
+text = "PRESS [E] To
+"
+horizontal_alignment = 1

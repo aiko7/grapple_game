@@ -32,7 +32,8 @@ func _process(delta):
 		sprite.position.y = original_y_position + sin(time_passed * bob_speed) * bob_height
 
 func _on_body_entered(body):
-	if body.name == "Player" or body.is_in_group("player"):
+	# if body.name == "Player" or body.is_in_group("player"):
+	if body.is_in_group("player"):
 		collect_star()
 
 func collect_star():

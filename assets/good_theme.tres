@@ -92,7 +92,7 @@ expand_margin_bottom = 6.0
 region_rect = Rect2(0, 0, 18, 12)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqf0k"]
-bg_color = Color(0, 0, 0.129412, 0.854902)
+bg_color = Color(0, 0, 0.129, 0.939)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1

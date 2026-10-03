@@ -1,84 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkk2cilj1ivi3"]
+[gd_scene load_steps=9 format=3 uid="uid://dkk2cilj1ivi3"]
 
 [ext_resource type="Script" uid="uid://b7iapth3xih8j" path="res://scripts/pause_menu.gd" id="1_onxn3"]
+[ext_resource type="Theme" uid="uid://csv8kf1tfvyv4" path="res://assets/good_theme_long.tres" id="2_ca4wi"]
 [ext_resource type="FontFile" uid="uid://dmt27fswb4r8o" path="res://assets/boldpixels.boldpixels.ttf" id="2_ob0hc"]
-[ext_resource type="Texture2D" uid="uid://bkr5itvdiy7qp" path="res://assets/sprites/buttons.png" id="3_5s1jx"]
 [ext_resource type="Script" uid="uid://cnb7qnlpljrot" path="res://scripts/settings_menu.gd" id="4_eqghv"]
 [ext_resource type="Theme" uid="uid://q0x0syx0vyye" path="res://assets/good_theme.tres" id="5_7ka3a"]
 [ext_resource type="Script" uid="uid://dnkx8y2h2m6u1" path="res://scripts/info_menu.gd" id="6_864k2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jflf"]
-content_margin_left = 6.0
-content_margin_top = 5.0
-content_margin_right = 4.0
-content_margin_bottom = 5.0
-bg_color = Color(0.1, 0.1, 0.1, 0.3)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dp50"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(1, 1, 1, 0.75)
-draw_center = false
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxw7c"]
-content_margin_left = 6.0
-content_margin_top = 7.0
-content_margin_right = 4.0
-content_margin_bottom = 7.0
-texture = ExtResource("3_5s1jx")
-region_rect = Rect2(0, 72, 76, 18)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oefhw"]
-texture = ExtResource("3_5s1jx")
-region_rect = Rect2(0, 54, 76, 18)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qheto"]
-
-[sub_resource type="Theme" id="Theme_w3pfr"]
-Button/colors/font_color = Color(0.66, 1, 0.852667, 1)
-Button/colors/font_disabled_color = Color(1, 1, 1, 0.529412)
-Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
-Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
-Button/colors/icon_focus_color = Color(1, 1, 1, 1)
-Button/colors/icon_hover_color = Color(1, 1, 1, 1)
-Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-Button/colors/icon_normal_color = Color(1, 1, 1, 1)
-Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
-Button/constants/align_to_largest_stylebox = 0
-Button/constants/h_separation = 4
-Button/constants/icon_max_width = 0
-Button/constants/outline_size = 0
-Button/font_sizes/font_size = 32
-Button/fonts/font = ExtResource("2_ob0hc")
-Button/styles/disabled = SubResource("StyleBoxFlat_6jflf")
-Button/styles/focus = SubResource("StyleBoxFlat_6dp50")
-Button/styles/hover = SubResource("StyleBoxTexture_rxw7c")
-Button/styles/normal = SubResource("StyleBoxTexture_oefhw")
-Button/styles/pressed = SubResource("StyleBoxTexture_qheto")
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mor5"]
 font = ExtResource("2_ob0hc")
@@ -92,7 +19,6 @@ font_size = 32
 
 [node name="PauseMenu" type="Panel" parent="."]
 process_mode = 3
-visible = false
 clip_contents = true
 anchors_preset = -1
 anchor_left = -0.00607639
@@ -110,7 +36,7 @@ offset_left = 462.0
 offset_top = 153.0
 offset_right = 690.0
 offset_bottom = 207.0
-theme = SubResource("Theme_w3pfr")
+theme = ExtResource("2_ca4wi")
 text = "Resume "
 
 [node name="SettingsButton" type="Button" parent="PauseMenu"]
@@ -119,7 +45,7 @@ offset_left = 462.0
 offset_top = 223.0
 offset_right = 690.0
 offset_bottom = 277.0
-theme = SubResource("Theme_w3pfr")
+theme = ExtResource("2_ca4wi")
 text = "Settings"
 
 [node name="LevelSelectorButton" type="Button" parent="PauseMenu"]
@@ -128,7 +54,7 @@ offset_left = 462.0
 offset_top = 293.0
 offset_right = 690.0
 offset_bottom = 347.0
-theme = SubResource("Theme_w3pfr")
+theme = ExtResource("2_ca4wi")
 text = "Level Selector"
 
 [node name="InfoButton" type="Button" parent="PauseMenu"]
@@ -137,7 +63,7 @@ offset_left = 462.0
 offset_top = 363.0
 offset_right = 690.0
 offset_bottom = 417.0
-theme = SubResource("Theme_w3pfr")
+theme = ExtResource("2_ca4wi")
 text = "Info"
 
 [node name="QuitButton" type="Button" parent="PauseMenu"]
@@ -146,10 +72,11 @@ offset_left = 462.0
 offset_top = 433.0
 offset_right = 690.0
 offset_bottom = 487.0
-theme = SubResource("Theme_w3pfr")
+theme = ExtResource("2_ca4wi")
 text = "Quit"
 
 [node name="SettingsMenu" type="Panel" parent="."]
+visible = false
 anchors_preset = -1
 anchor_right = 0.748264
 anchor_bottom = 0.554012
